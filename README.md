@@ -17,6 +17,74 @@ O que irá encontrar neste repositório são diversos modelos de layout e organi
 
 
 
+## Alguns diretorios usados nos layouts e nas estruturas
+
+### Projetos Web Standard
+
+##### /config
+##### /model
+##### /controller
+           - /handler
+           - /middleware
+##### /pkg
+##### /repo
+##### /README
+
+### Projetos Web Clean Arquitecture
+
+```_bash
+├── Makefile
+├── README.md
+├── app
+│   ├── domain
+│   │   ├── model
+│   │   ├── repository
+│   │   └── service
+│   ├── interface
+│   │   ├── persistence
+│   │   └── rpc
+│   ├── registry
+│   └── usecase
+├── cmd
+│   └── 8am
+│       └── main.go
+└── vendor
+    ├── vendor packages
+    |...
+```    
+
+### Projetos Web microservice
+
+##### /proto
+##### /server
+##### /config
+##### /README
+
+
+### Projetos Web fragment service
+
+##### /model
+##### /pkg
+##### /config
+##### /README
+
+
+### Projetos Serverless
+
+##### /pkg
+##### /model
+##### /README
+
+### Projetos Lib
+
+##### /README
+
+
+
+
+
+
+
 
 
 
