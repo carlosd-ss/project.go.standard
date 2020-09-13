@@ -21,15 +21,49 @@ O que irá encontrar neste repositório são diversos modelos de layout e organi
 
 ### Projetos Web Standard
 
-##### /config
-##### /model
-##### /controller
-           - /handler
-           - /middleware
-##### /pkg
-##### /repo
-##### /README
-
+```_bash
+├── Makefile
+├── Dockerfile
+├── README.md
+├── go.mod
+├── go.sum
+├── main.go
+├── certs
+├── config
+├── controler
+│   ├── handler
+│   │   ├── user
+    │       └── post.user.go
+    │       └── post.user_test.go
+    │       └── put.user.go
+            └── put.user_test.go
+            └── delete.user.go
+            └── delete.user_test.go
+            └── get.user.go
+            └── get.user_test.go
+│   ├── middleware
+         └── logger.go
+         └── gzip.go
+         └── cors.go
+├── model
+│   ├── user
+         └── user.go
+├── pkg
+│   └── fmts
+│       └── fmts.go
+│       └── fmts_test.go
+└── repo
+    ├── user
+        └── add.user.go
+        └── add.user_test.go
+        └── del.user.go
+        └── del.user_test.go
+        └── up.user.go
+        └── up.user_test.go
+        └── get.user.go
+        └── get.user_test.go
+    |...
+```  
 ### Projetos Web Clean Arquitecture
 
 ```_bash
@@ -53,13 +87,31 @@ O que irá encontrar neste repositório são diversos modelos de layout e organi
     |...
 ```    
 
-### Projetos Web microservice
+### Projetos Web microservice Grpc
 
-##### /proto
-##### /server
-##### /config
-##### /README
-
+```_bash
+├── Makefile
+├── README.md
+├── certs
+├── cmd
+│   ├── cli
+│   ├── server
+│   ├── gw
+├── docker
+│   └── Dockerfile
+│   └── Makefile
+├── pkg
+│   └── fmts
+│   └── grpc
+└── proto
+    ├── user
+         └── user.go
+         └── user.proto
+    ├── customer
+         └── customer.go
+         └── customer.proto
+    |...
+```    
 
 ### Projetos Web fragment service
 
