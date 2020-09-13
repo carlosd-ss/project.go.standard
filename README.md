@@ -1,2 +1,2 @@
 # go.standard.project.layout
-go.standard.project.layout
+Go lang standard
