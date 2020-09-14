@@ -20,7 +20,7 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 
 ## 🕮 Alguns diretorios usados nos layouts e suas estruturas
 
-### Projetos Web Standard ☑️
+### Projetos Web Standard One ☑️
 
 ```_bash
 ├── Makefile
@@ -111,13 +111,18 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 │   ├── domain
 │   │   ├── model            
 │   │   │     └── user.go
+│   │   │
 │   │   ├── router            
 │   │   │      └── user.go 
+│   │   │       
 │   │   ├── mocks            
 │   │   │     └── user.go 
+│   │   │     └── user_test.go 
 │   │   ├── repository
 │   │   └── service
 │   │           └── service.go 
+                └── service_test.go 
+                 
 │   ├── interface
 │   │   ├── persistence
 │   │   └── rpc
