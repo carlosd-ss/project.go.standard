@@ -74,9 +74,15 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 ├── README.md
 ├── app
 │   ├── domain
-│   │   ├── model
+│   │   ├── model            
+│   │   │     └── user.go
+│   │   ├── router            
+│   │   │      └── user.go 
+        ├── mocks            
+│   │   │     └── user.go 
 │   │   ├── repository
 │   │   └── service
+               └── service.go 
 │   ├── interface
 │   │   ├── persistence
 │   │   └── rpc
