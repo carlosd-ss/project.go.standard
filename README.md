@@ -113,11 +113,11 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 │   │   │     └── user.go
 │   │   ├── router            
 │   │   │      └── user.go 
-        ├── mocks            
+│   │   ├── mocks            
 │   │   │     └── user.go 
 │   │   ├── repository
 │   │   └── service
-               └── service.go 
+│   │           └── service.go 
 │   ├── interface
 │   │   ├── persistence
 │   │   └── rpc
