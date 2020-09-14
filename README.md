@@ -1,5 +1,8 @@
-# Project go.standard.project.layout
+# Project Go Standart
 
+[GO](https://img.shields.io/badge/GO-%2300ADD8?style=for-the-badge&logo=Go&labelColor=%23444444)
+![Postgres](https://img.shields.io/badge/POSTGRESQL-%23336791?style=for-the-badge&logo=PostgreSQL&logoColor=%23336791&labelColor=%23444444)
+![MONGODB](https://img.shields.io/badge/MONGO-%237A248?style=for-the-badge&logo=MongoDB&labelColor=%23444444)
 
 Este repositório irá ajuda-lo a decidir qual melhor layout a ser utilizado em um projeto na linguagem Go.
 
@@ -33,18 +36,18 @@ O que irá encontrar neste repositório são diversos modelos de layout e organi
 ├── controler
 │   ├── handler
 │   │   ├── user
-    │       └── post.user.go
-    │       └── post.user_test.go
-    │       └── put.user.go
-            └── put.user_test.go
-            └── delete.user.go
-            └── delete.user_test.go
-            └── get.user.go
-            └── get.user_test.go
+    │   |    └── post.user.go
+    │   |    └── post.user_test.go
+    │   |    └── put.user.go
+    |    |    └── put.user_test.go
+    |    |    └── delete.user.go
+    |    |    └── delete.user_test.go
+    |    |    └── get.user.go
+    |    |    └── get.user_test.go
 │   ├── middleware
-         └── logger.go
-         └── gzip.go
-         └── cors.go
+        | └── logger.go
+        | └── gzip.go
+        | └── cors.go
 ├── model
 │   ├── user
          └── user.go
@@ -105,11 +108,11 @@ O que irá encontrar neste repositório são diversos modelos de layout e organi
 │   └── grpc
 └── proto
     ├── user
-         └── user.go
-         └── user.proto
+    |     └── user.go
+    |     └── user.proto
     ├── customer
-         └── customer.go
-         └── customer.proto
+    |     └── customer.go
+    |     └── customer.proto
     |...
 ```    
 
@@ -132,7 +135,16 @@ O que irá encontrar neste repositório são diversos modelos de layout e organi
 ##### /README
 
 
+## Links relacionados
 
+
+https://golang.org/doc/
+
+https://golang.org/doc/faq
+
+https://tour.golang.org/welcome/1
+
+https://golang.org/doc/effective_go.html
 
 
 
