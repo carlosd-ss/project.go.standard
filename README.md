@@ -124,7 +124,7 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 
 ### Projetos Web fragment service 
 
-
+```_bash
 ├── Makefile
 ├── Dockerfile
 ├── README.md
@@ -138,6 +138,7 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 │    │   ├── user
 │    │       └── post.user.go
 │    │       └── post.user_test.go
+│    │       
 │    ├── middleware
 │         └── logger.go
 │         └── gzip.go
@@ -156,13 +157,8 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
     ├── user
         └── add.user.go
         └── add.user_test.go
-        └── del.user.go
-        └── del.user_test.go
-        └── up.user.go
-        └── up.user_test.go
-        └── get.user.go
-        └── get.user_test.go
 ```  
+
 
 ### Projetos Serverless
 
