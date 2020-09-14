@@ -86,7 +86,8 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 │   └── 8am
 │       └── main.go
 └── vendor
-    ├── vendor packages
+│   ├── vendor packages
+└──
 ```    
 
 ### Projetos Web microservice Grpc ☑️
@@ -106,12 +107,13 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 │   └── fmts
 │   └── grpc
 └── proto
-    ├── user
-    │     └── user.go
-    │     └── user.proto
-    ├── customer
-    │     └── customer.go
-    │     └── customer.proto
+│   ├── user
+│   │     └── user.go
+│   │     └── user.proto
+│   ├── customer
+│   │     └── customer.go
+│   │     └── customer.proto
+└──
 ```    
 
 ### Projetos Web fragment service 
@@ -128,6 +130,7 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 │   └── fmts
 │       └── fmts.go
 │       └── fmts_test.go
+└──
 ```   
 
 ### Projetos Serverless
@@ -136,13 +139,32 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 ```_bash
 ├── Makefile
 ├── README.md
-├── model
-│    ├── user
-│         └── user.go
-├── pkg
-│   └── fmts
-│       └── fmts.go
-│       └── fmts_test.go
+├── Project.User
+│   ├── go.mod
+│   ├── go.sum
+│   ├── main.go
+│   ├── Makefile
+│   ├── models
+│   │   ├── user.go
+│   └── pkg
+│       ├── user
+│       │   └── publicar.go
+│       └── sqs
+│           └── sendjobfifo.go
+├── Project.Customer
+│   ├── go.mod
+│   ├── go.sum
+│   ├── main.go
+│   ├── Makefile
+│   ├── models
+│   │   ├── sqs.customer.go
+│   │   ├── return.customer.go
+│   └── pkg
+│       ├── customer
+│       │   └── publicar.go
+│       └── sqs
+│           └── sendjoberror.go
+└──
 ```   
 
 
@@ -153,6 +175,7 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 ```_bash
 ├── Makefile
 ├── README.md
+└──
 ```   
 
 
