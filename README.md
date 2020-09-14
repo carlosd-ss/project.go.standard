@@ -129,8 +129,7 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 │   ├── registry
 │   └── usecase
 ├── cmd
-│   └── 8am
-│       └── main.go
+│    └── main.go
 └── vendor
 │   ├── vendor packages
 └──
