@@ -96,10 +96,16 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 ├── Makefile
 ├── README.md
 ├── certs
+│     └── server.crt
+│     └── server.csr
+│     └── server.key
 ├── cmd
-│   ├── cli
+│   ├── cli         
+│   │    └── cli.go
 │   ├── server
+│   │        └── server.go 
 │   ├── gw
+│       └── gw.go    
 ├── docker
 │   └── Dockerfile
 │   └── Makefile
@@ -119,19 +125,44 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 ### Projetos Web fragment service 
 
 
-```_bash
 ├── Makefile
+├── Dockerfile
 ├── README.md
+├── go.mod
+├── go.sum
+├── main.go
+├── certs
 ├── config
+├── controler
+│    ├── handler
+│    │   ├── user
+│    │       └── post.user.go
+│    │       └── post.user_test.go
+│    ├── middleware
+│         └── logger.go
+│         └── gzip.go
+│         └── cors.go
+├── route
+│     ├── user
+│         └── user.go
 ├── model
-│    ├── user
+│     ├── user
 │         └── user.go
 ├── pkg
 │   └── fmts
 │       └── fmts.go
 │       └── fmts_test.go
-└──
-```   
+└── repo
+    ├── user
+        └── add.user.go
+        └── add.user_test.go
+        └── del.user.go
+        └── del.user_test.go
+        └── up.user.go
+        └── up.user_test.go
+        └── get.user.go
+        └── get.user_test.go
+```  
 
 ### Projetos Serverless
 
