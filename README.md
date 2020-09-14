@@ -67,6 +67,41 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
         └── get.user.go
         └── get.user_test.go
 ```  
+### Projetos Web Standard Two ☑️
+
+```_bash
+├── Makefile
+├── Dockerfile
+├── README.md
+├── go.mod
+├── go.sum
+├── main.go
+├── certs
+├── config
+├── controler
+│    ├── handler
+│    │   ├── user
+│    │       └── user.go
+│    │       └── user_test.go
+│    ├── middleware
+│         └── logger.go
+│         └── gzip.go
+│         └── cors.go
+├── route
+│     ├── user
+│         └── user.go
+├── model
+│     ├── user
+│         └── user.go
+├── pkg
+│   └── fmts
+│       └── fmts.go
+│       └── fmts_test.go
+└── repo
+    ├── user
+        └── user.go
+        └── user_test.go
+```  
 ### Projetos Web Clean Arquitecture ☑️
 
 ```_bash
@@ -141,26 +176,26 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 ├── config
 ├── controler
 │    ├── handler
-│    │   ├── user
-│    │       └── post.user.go
-│    │       └── post.user_test.go
+│    │     └──  user
+│    │           └── post.user.go
+│    │           └── post.user_test.go
 │    │       
 │    ├── middleware
 │         └── logger.go
 │         └── gzip.go
 │         └── cors.go
 ├── route
-│     ├── user
+│     └──  user
 │         └── user.go
 ├── model
-│     ├── user
+│     └──  user
 │         └── user.go
 ├── pkg
 │   └── fmts
 │       └── fmts.go
 │       └── fmts_test.go
 └── repo
-    ├── user
+     └── user
         └── add.user.go
         └── add.user_test.go
 ```  
@@ -208,7 +243,7 @@ Quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o pro
 ```_bash
 ├── Makefile
 ├── README.md
-└──
+
 ```   
 
 
