@@ -7,8 +7,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/jeffotoni/go.standard.project.layout/project.web/standard.libray/crud.user/pkg/pkg/util"
-	"github.com/jeffotoni/go.standard.project.layout/project.web/standard.libray/crud.user/pkg/pkg/zerolog"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/pkg/pkg/util"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/pkg/pkg/zerolog"
 )
 
 // Stop turns off the HTML Server

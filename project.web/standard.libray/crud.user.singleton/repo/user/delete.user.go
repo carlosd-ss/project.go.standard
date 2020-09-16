@@ -1,8 +1,8 @@
 package user
 
 import (
-	pg "github.com/jeffotoni/go.standard.project.layout/project.web/standard.libray/crud.user/pkg/pkg/psql"
-	"github.com/jeffotoni/go.standard.project.layout/project.web/standard.libray/crud.user/pkg/pkg/zerolog"
+	pg "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/pkg/pkg/psql"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/pkg/pkg/zerolog"
 )
 
 func Delete(userUuid string) bool {

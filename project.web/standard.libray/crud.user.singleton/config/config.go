@@ -8,7 +8,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/jeffotoni/go.standard.project.layout/project.web/standard.libray/crud.user/pkg/pkg/fmts"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/pkg/pkg/fmts"
 )
 
 var (

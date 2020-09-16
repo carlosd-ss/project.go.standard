@@ -1,4 +1,4 @@
-module github.com/jeffotoni/go.standard.project.layout/project.web/standard.libray/crud.user/api.user
+module github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/api.user
 
 go 1.14
 

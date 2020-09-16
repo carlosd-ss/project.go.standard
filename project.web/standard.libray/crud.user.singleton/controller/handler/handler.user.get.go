@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/jeffotoni/go.standard.project.layout/project.web/standard.libray/crud.user/api.user/repo/user"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/api.user/repo/user"
 )
 
 func GetUser(userUuid string, w http.ResponseWriter, r *http.Request) {

@@ -6,10 +6,10 @@ package controller
 import (
 	"net/http"
 
-	"github.com/jeffotoni/go.standard.project.layout/project.web/standard.libray/crud.user/api.user/controller/handler"
-	cf "github.com/jeffotoni/go.standard.project.layout/project.web/standard.libray/crud.user/pkg/config"
-	mw "github.com/jeffotoni/go.standard.project.layout/project.web/standard.libray/crud.user/pkg/middleware"
-	"github.com/jeffotoni/go.standard.project.layout/project.web/standard.libray/crud.user/pkg/pkg/cors"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/api.user/controller/handler"
+	cf "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/pkg/config"
+	mw "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/pkg/middleware"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/pkg/pkg/cors"
 )
 
 func StartServer(cfg cf.Config) *GoServerHttp {

@@ -7,10 +7,10 @@ import (
 	"os"
 	"os/signal"
 
-	cfp "github.com/jeffotoni/go.standard.project.layout/project.web/standard.libray/crud.user/api.user/config"
-	"github.com/jeffotoni/go.standard.project.layout/project.web/standard.libray/crud.user/api.user/controller"
-	cf "github.com/jeffotoni/go.standard.project.layout/project.web/standard.libray/crud.user/pkg/config"
-	"github.com/jeffotoni/go.standard.project.layout/project.web/standard.libray/crud.user/pkg/pkg/util"
+	cfp "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/api.user/config"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/api.user/controller"
+	cf "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/pkg/config"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/pkg/pkg/util"
 )
 
 //var confserv = cfp.Endpoint()

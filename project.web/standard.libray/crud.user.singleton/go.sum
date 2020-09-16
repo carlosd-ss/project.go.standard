@@ -2,7 +2,7 @@ github.com/coreos/go-systemd v0.0.0-20190321100706-95778dfbb74e/go.mod h1:F5haX7
 github.com/dgrijalva/jwt-go v1.0.2 h1:KPldsxuKGsS2FPWsNeg9ZO18aCrGKujPoWXn2yo+KQM=
 github.com/dgrijalva/jwt-go v3.2.0+incompatible h1:7qlOGliEKZXTDg6OTjfoBKDXWrumCAMpl/TFQ4/5kLM=
 github.com/dgrijalva/jwt-go v3.2.0+incompatible/go.mod h1:E3ru+11k8xSBh+hMPgOLZmtrrCbhqsmaPHjLKYnJCaQ=
-github.com/jeffotoni/go.standard.project.layout v0.0.0-20200913120742-b0aae255b536 h1:js4TJyVOF33i8PB5xrJYAOljLbREETHAPIxUI4UIMXs=
+github.com/jeffotoni/project.go.standard v0.0.0-20200913120742-b0aae255b536 h1:js4TJyVOF33i8PB5xrJYAOljLbREETHAPIxUI4UIMXs=
 github.com/jeffotoni/crud.user v0.0.0-20200406060351-c943a4e61405 h1:lMfsWGuapVuiFp5+HQ/nc3uLvfzUOztkkG3jYmfT2Us=
 github.com/jeffotoni/crud.user v0.0.0-20200406060351-c943a4e61405/go.mod h1:D36sn3v5wH8+VK17DXcAUE0mjGhueTRwe+VVof/nPiI=
 github.com/lib/pq v1.3.0 h1:/qkRGz8zljWiDcFvgpwUpwIAPu3r07TDvs3Rws+o/pU=
