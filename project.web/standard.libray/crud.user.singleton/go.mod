@@ -1,11 +1,10 @@
-module github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/api.user
+module github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/api.user
 
-go 1.14
+go 1.15
 
 require (
-	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
-	github.com/jeffotoni/crud.user v0.0.0-20200406060351-c943a4e61405
-	github.com/lib/pq v1.3.0 // indirect
-	github.com/rs/zerolog v1.18.0 // indirect
-	golang.org/x/crypto v0.0.0-20200403201458-baeed622b8d8 // indirect
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
+	github.com/jeffotoni/concat v0.0.4
+	github.com/rs/zerolog v1.20.0
+	golang.org/x/crypto v0.0.0-20200820211705-5c72a883971a
 )

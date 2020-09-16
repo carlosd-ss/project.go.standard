@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/api.user/repo/user"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/api.user/repo/user"
 )
 
 func DeleteUser(userUuid string, w http.ResponseWriter, r *http.Request) {

@@ -8,7 +8,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/pkg/pkg/fmts"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/pkg/fmts"
 )
 
 var (
@@ -35,7 +35,7 @@ const (
 	//YB
 )
 const (
-	NAME_APP     = "crud.user"
+	NAME_APP     = "crud.user.singleton"
 	PROJECT_SITE = ""
 )
 

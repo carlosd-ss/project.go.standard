@@ -13,7 +13,7 @@ import (
 func CustomHeaders() Adapter {
 	return func(h http.Handler) http.Handler {
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-			w.Header().Add("X-Server", "api.crud.user")
+			w.Header().Add("X-Server", "api.crud.user.singleton")
 			w.Header().Add("Content-Type", "application/json")
 			//w.Header().Add(runtime.HeaderContentType, "application/json")
 

@@ -2,9 +2,9 @@ package gjwt
 
 import (
 	jwt "github.com/dgrijalva/jwt-go"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/cert"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/models/jwt"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/pkg/zerolog"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton.singleton/pkg/cert"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton.singleton/pkg/models/jwt"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton.singleton/pkg/pkg/zerolog"
 )
 
 // jwt init
@@ -17,7 +17,7 @@ func init() {
 			"1.0.0",
 			"gjwt.go",
 			25,
-			"api.crud.user.com.br",
+			"api.crud.user.singleton.com.br",
 			"init jwt.ParseRSAPrivateKeyFromPEM(privateByte)",
 			errx.Error())
 		return
@@ -30,7 +30,7 @@ func init() {
 			"1.0.0",
 			"gjwt.go",
 			38,
-			"api.crud.user.com.br",
+			"api.crud.user.singleton.com.br",
 			"init jwt.ParseRSAPublicKeyFromPEM(publicByte)",
 			errx.Error())
 		return

@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/pkg/pkg/util"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/pkg/util"
 
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/pkg/pkg/zerolog"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/pkg/zerolog"
 )
 
 var rp = rand.New(rand.NewSource(time.Now().UnixNano()))
@@ -29,7 +29,7 @@ func Ping(w http.ResponseWriter, r *http.Request) {
 			"1.0.0",
 			"ping.go",
 			27,
-			"api.crud.user.com.br",
+			"api.crud.user.singleton.com.br",
 			"/ping",
 			"Ping Test Msg Error, tem que ser method POST")
 		return

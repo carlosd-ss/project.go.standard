@@ -1,8 +1,8 @@
 package user
 
 import (
-	pg "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/pkg/pkg/psql"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user/pkg/pkg/zerolog"
+	pg "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/pkg/psql"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/pkg/zerolog"
 )
 
 func List(uuiduser string) (userjson string) {
@@ -14,7 +14,7 @@ func List(uuiduser string) (userjson string) {
 			"1.0.0",
 			"get.user.go",
 			13,
-			"api.crud.user.com.br",
+			"api.crud.user.singleton.com.br",
 			"List user",
 			err.Error())
 		return "{}"
