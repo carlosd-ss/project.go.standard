@@ -15,7 +15,7 @@ build:
 update:
 	@echo "########## Compilando nossa API ... "
 	@rm -f go.*
-	go mod init github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/
+	go mod init github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton
 	go build -trimpath -ldflags="-s -w" -o main.go
 	sleep 1
 	@echo "buid completo..."

@@ -4,7 +4,7 @@ import (
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton.singleton/pkg/cert"
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton.singleton/pkg/models/jwt"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton.singleton/pkg/pkg/zerolog"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton.singleton/pkg/zerolog"
 )
 
 // jwt init

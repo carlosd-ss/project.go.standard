@@ -4,9 +4,9 @@
 package controller
 
 import (
-	cfp "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/api.user/config"
+	cfp "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/config"
 	cf "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/config"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/pkg/util"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/util"
 )
 
 func Show(cfg cf.Config) {

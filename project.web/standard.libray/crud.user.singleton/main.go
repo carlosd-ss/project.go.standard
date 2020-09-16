@@ -7,8 +7,8 @@ import (
 	"os"
 	"os/signal"
 
-	cfp "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/api.user/config"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/api.user/controller"
+	cfp "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/config"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/controller"
 	cf "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/config"
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/pkg/util"
 )

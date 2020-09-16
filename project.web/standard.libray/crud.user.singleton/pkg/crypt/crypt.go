@@ -18,7 +18,7 @@ import (
 
 	"time"
 
-	"github.com/jeffotoni/crud.user.singleton/pkg/pkg/zerolog"
+	"github.com/jeffotoni/crud.user.singleton/pkg/zerolog"
 	"golang.org/x/crypto/bcrypt"
 )
 

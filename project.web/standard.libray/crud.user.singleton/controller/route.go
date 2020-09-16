@@ -6,7 +6,7 @@ package controller
 import (
 	"net/http"
 
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/api.user/controller/handler"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/controller/handler"
 	cf "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/config"
 	mw "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/middleware"
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/pkg/cors"

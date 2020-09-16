@@ -1,4 +1,4 @@
-module github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/api.user
+module github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton
 
 go 1.15
 
