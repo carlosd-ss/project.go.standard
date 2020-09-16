@@ -3,7 +3,7 @@ package gjwt
 import (
 	"net/http"
 
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton.singleton/pkg/pkg/util"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton.singleton/pkg/util"
 )
 
 // Returns json without typing in http

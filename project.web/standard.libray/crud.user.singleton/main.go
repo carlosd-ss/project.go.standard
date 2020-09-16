@@ -10,7 +10,7 @@ import (
 	cfp "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/config"
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/controller"
 	cf "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/config"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/pkg/util"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/util"
 )
 
 //var confserv = cfp.Endpoint()
