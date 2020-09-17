@@ -7,7 +7,7 @@ package middleware
 import (
 	"net/http"
 
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton.singleton/pkg/gjwt"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/gjwt"
 )
 
 func AutJwt() Adapter {

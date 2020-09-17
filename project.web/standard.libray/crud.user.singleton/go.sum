@@ -1,7 +1,10 @@
 github.com/coreos/go-systemd v0.0.0-20190321100706-95778dfbb74e/go.mod h1:F5haX7vjVVG0kc13fIWeqUViNPyEJxv/OmvnBo0Yme4=
+github.com/dgrijalva/jwt-go v1.0.2 h1:KPldsxuKGsS2FPWsNeg9ZO18aCrGKujPoWXn2yo+KQM=
+github.com/dgrijalva/jwt-go v3.2.0+incompatible h1:7qlOGliEKZXTDg6OTjfoBKDXWrumCAMpl/TFQ4/5kLM=
+github.com/dgrijalva/jwt-go v3.2.0+incompatible/go.mod h1:E3ru+11k8xSBh+hMPgOLZmtrrCbhqsmaPHjLKYnJCaQ=
 github.com/jeffotoni/concat v0.0.4 h1:FOmEwTnQUFgn9whwQSv2bKibvZdCT2Fw/pRAD3Qs8hs=
 github.com/jeffotoni/concat v0.0.4/go.mod h1:uiBgJA+SQfPoUYS1c/X1Nx5EozVmqMeNpnH1Qm+jU9k=
-github.com/jeffotoni/project.go.standard v0.0.0-20200916200307-dc085a345692 h1:pUES36BFcYgKDRfU2DEqGPMueDbF1uJ+7CAggAxHoEI=
+github.com/jeffotoni/project.go.standard v0.0.0-20200917141012-d048927b1a69 h1:FV0L7Qkm9vOsJyWUzK2AiekqNx8YNdw+kRCkZ/DKGwo=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/rs/xid v1.2.1/go.mod h1:+uKXf+4Djp6Md1KODXJxgGQPKngRmWyn10oCKFzNHOQ=
 github.com/rs/zerolog v1.20.0 h1:38k9hgtUBdxFwE34yS8rTHmHBa4eN16E4DJlv177LNs=
