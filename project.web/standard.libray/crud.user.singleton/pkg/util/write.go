@@ -22,12 +22,12 @@ func WriteJson(Status string, Msg string) {
 	msgJson, errj := json.Marshal(msgJsonStruct)
 	if errj != nil {
 		msg := `{"msg":"We could not generate the json error!"}`
-		Print(msg)
+		print(msg)
 		return
 	}
 
 	// byte
-	Print(string(msgJson))
+	print(string(msgJson))
 }
 
 // Returns json by typing on http
@@ -55,10 +55,6 @@ func GetJson(w http.ResponseWriter, Status string, Msg string, httpStatus int) s
 		return msg
 	}
 	return string(msgJson)
-}
-
-func MsgErrorJson(msg string) string {
-	return BuildJSON(`{"msg":"`, msg, `"}`)
 }
 
 func DoJson(Status string, Msg string) string {

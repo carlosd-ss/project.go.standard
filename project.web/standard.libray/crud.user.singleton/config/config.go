@@ -83,13 +83,13 @@ var (
 
 /////// DATA BASE
 var (
-	DB_NAME = ""
+	DB_NAME = "user"
 	// DB_HOST     = ""
-	DB_HOST     = "" // container
-	DB_USER     = ""
-	DB_PASSWORD = ""
-	DB_PORT     = ""
-	DB_SSL      = ""
+	DB_HOST     = "localhost" // container
+	DB_USER     = "carlos"
+	DB_PASSWORD = "20222022"
+	DB_PORT     = "5432"
+	DB_SSL      = "disable"
 	DB_SORCE    = "postgres"
 
 	/////////server

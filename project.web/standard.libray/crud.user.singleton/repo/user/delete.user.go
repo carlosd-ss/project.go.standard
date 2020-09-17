@@ -6,7 +6,7 @@ import (
 )
 
 func Delete(userUuid string) bool {
-	Db := pg.ConnectNew()
+	Db := pg.Connect()
 	dell := `DELETE FROM public.ad_phone WHERE logi_uuid=$1`
 	_, err := Db.Exec(dell, userUuid)
 	if err != nil {
