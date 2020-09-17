@@ -6,10 +6,11 @@ package controller
 import (
 	"net/http"
 
+
 	cf "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/config"
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/controller/handler"
 	mw "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/controller/middleware"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/cors"
+	//"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/cors"
 )
 
 func StartServer(cfg cf.Config) *GoServerHttp {

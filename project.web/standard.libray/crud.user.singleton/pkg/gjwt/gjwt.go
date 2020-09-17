@@ -1,9 +1,7 @@
 package gjwt
 
 import (
-	jwt "github.com/dgrijalva/jwt-go"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/cert"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/models/jwt"
+
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/zerolog"
 )
 
