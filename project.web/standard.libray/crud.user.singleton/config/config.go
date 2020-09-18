@@ -12,7 +12,7 @@ import (
 )
 
 var (
-	PORT_SERVER = "5209"
+	PORT_SERVER = "8181"
 	HOST_SERVER = "0.0.0.0"
 	HOST_CONFIG = fmts.Concat(HOST_SERVER, ":", PORT_SERVER)
 )

@@ -8,15 +8,17 @@ PORT_SERVER = 5209
 
 build:
 	@echo "########## Compilando nossa API ... "
-	go build -ldflags="-s -w" -o api0.go
+	#go build -ldflags="-s -w" -o crud.user.singleton.go
+	CGO_ENABLED=0 GOOS=linux GOARCH=386 go build --trimpath -a -tags netgo -ldflags '-w -extldflags "-static"' -o crud.user.singleton main.go
 	@echo "buid completo..."
 	@echo "\033[0;33m################ run #####################\033[0m"
+	./crud.user.singleton
 
 update:
 	@echo "########## Compilando nossa API ... "
 	@rm -f go.*
 	go mod init github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton
-	go build -trimpath -ldflags="-s -w" -o api0.go
+	CGO_ENABLED=0 GOOS=linux GOARCH=386 go build --trimpath -a -tags netgo -ldflags '-w -extldflags "-static"' -o crud.user.singleton main.go
 	sleep 1
 	@echo "buid completo..."
 	@echo "fim"

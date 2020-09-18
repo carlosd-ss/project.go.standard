@@ -1,7 +1,6 @@
 github.com/coreos/go-systemd v0.0.0-20190321100706-95778dfbb74e/go.mod h1:F5haX7vjVVG0kc13fIWeqUViNPyEJxv/OmvnBo0Yme4=
 github.com/jeffotoni/concat v0.0.4 h1:FOmEwTnQUFgn9whwQSv2bKibvZdCT2Fw/pRAD3Qs8hs=
 github.com/jeffotoni/concat v0.0.4/go.mod h1:uiBgJA+SQfPoUYS1c/X1Nx5EozVmqMeNpnH1Qm+jU9k=
-github.com/jeffotoni/project.go.standard v0.0.0-20200918184445-b2da66eb2924 h1:2jIY5yjlfQe9+zCUf0HXZypPYuYFC9xyzqEDLr5xPhQ=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/rs/xid v1.2.1/go.mod h1:+uKXf+4Djp6Md1KODXJxgGQPKngRmWyn10oCKFzNHOQ=
 github.com/rs/zerolog v1.20.0 h1:38k9hgtUBdxFwE34yS8rTHmHBa4eN16E4DJlv177LNs=

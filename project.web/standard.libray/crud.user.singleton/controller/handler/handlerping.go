@@ -9,6 +9,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/fmts"
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/zerolog"
 )
 
@@ -33,9 +34,9 @@ func Ping(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	//jsonstr := util.BuildJSON(`{"msg":"pong","method":"`, strings.ToUpper(r.Method), `"}`)
-	//w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	//w.WriteHeader(http.StatusOK)
-	//w.Write([]byte(jsonstr))
-	//return
+	jsonstr := fmts.Concat(`{"msg":"pong","method":"`, strings.ToUpper(r.Method), `"}`)
+	w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte(jsonstr))
+	return
 }

@@ -5,6 +5,7 @@ package controller
 
 import (
 	"net/http"
+	"time"
 
 	cf "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/config"
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/controller/handler"
@@ -12,7 +13,7 @@ import (
 	//"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/cors"
 )
 
-func StartServer(cfg cf.Config) *GoServerHttp {
+func Routes(cfg cf.Config) *GoServerHttp {
 
 	///////////////////////////////////////
 	/////
@@ -30,7 +31,7 @@ func StartServer(cfg cf.Config) *GoServerHttp {
 		mw.CustomHeaders(),
 		mw.Gzip(),
 		mw.MaxClients(cf.MaxClients),
-		mw.Logger("auth/ping"),
+		mw.Logger("user/ping"),
 	))
 
 	///////////////////////////////////////////////////////////
@@ -59,8 +60,9 @@ func StartServer(cfg cf.Config) *GoServerHttp {
 			Addr: cfg.Host,
 			//Handler: handlerCors,
 			//Handler: middpromet,
-			//ReadTimeout:  time.Millisecond * 600,
-			//WriteTimeout: time.Millisecond * 400,
+			Handler:      mux,
+			ReadTimeout:  time.Millisecond * 600,
+			WriteTimeout: time.Millisecond * 400,
 			//ReadTimeout:  cfg.ReadTimeout,
 			//WriteTimeout: cfg.WriteTimeout,
 			// IdleTimeout:    1000 * time.Millisecond,
@@ -73,7 +75,7 @@ func StartServer(cfg cf.Config) *GoServerHttp {
 
 	// Start the listener
 	//go func() {
-	//Show(cfg)
+	Show(cfg)
 	ApiServer.server.ListenAndServe()
 	ApiServer.wg.Done()
 	//}()
