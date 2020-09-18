@@ -6,7 +6,6 @@ package controller
 import (
 	"net/http"
 
-
 	cf "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/config"
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/controller/handler"
 	mw "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/controller/middleware"
@@ -23,7 +22,7 @@ func StartServer(cfg cf.Config) *GoServerHttp {
 	// DefaultServeMux
 	mux := http.NewServeMux()
 
-	corsx := cors.Domain()
+	//corsx := cors.Domain()
 
 	// POST handler /ping
 	handlerApiPing := http.HandlerFunc(handler.Ping)
@@ -44,21 +43,21 @@ func StartServer(cfg cf.Config) *GoServerHttp {
 		//mw.MetricsPrometheusDinamic(),
 		mw.Cors(),
 		mw.CustomHeaders(),
-		mw.AutJwt(),
+		//mw.AutJwt(),
 		//mw.AuthJwtNot([]string{"/products"}),
 		mw.Logger("/")))
 
 	// withMetrics := mw.MetricsPrometheus(handler)
 	// middpromet := mdlw.Handler("", mux)
 
-	handlerCors := corsx.Handler(mux)
+	//handlerCors := corsx.Handler(mux)
 
 	// println(cfg.Host)
 	// Create the HTML Server
 	ApiServer := GoServerHttp{
 		server: &http.Server{
-			Addr:    cfg.Host,
-			Handler: handlerCors,
+			Addr: cfg.Host,
+			//Handler: handlerCors,
 			//Handler: middpromet,
 			//ReadTimeout:  time.Millisecond * 600,
 			//WriteTimeout: time.Millisecond * 400,
@@ -74,7 +73,7 @@ func StartServer(cfg cf.Config) *GoServerHttp {
 
 	// Start the listener
 	//go func() {
-	Show(cfg)
+	//Show(cfg)
 	ApiServer.server.ListenAndServe()
 	ApiServer.wg.Done()
 	//}()
