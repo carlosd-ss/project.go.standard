@@ -7,7 +7,7 @@ import (
 
 func List(uuiduser string) (userjson string) {
 	Db := pg.Connect()
-	row := Db.QueryRow(`SELECT * FROM users WHERE userid=$1`, uuiduser)
+	row := Db.QueryRow(`SELECT * FROM adphone WHERE uuiduser=$1`, uuiduser)
 	err := row.Scan(&userjson)
 	if err != nil {
 		zerolog.Error(

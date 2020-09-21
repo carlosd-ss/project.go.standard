@@ -42,7 +42,7 @@ func Routes(cfg cf.Config) *GoServerHttp {
 	/////////////////////////////////////
 	mux.Handle("/", mw.Use(http.HandlerFunc(handler.HomeHandler),
 		//mw.MetricsPrometheusDinamic(),
-		mw.Cors(),
+		//mw.Cors(),
 		mw.CustomHeaders(),
 		//mw.AutJwt(),
 		//mw.AuthJwtNot([]string{"/products"}),

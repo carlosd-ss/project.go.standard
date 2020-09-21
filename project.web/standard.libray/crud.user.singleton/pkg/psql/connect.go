@@ -24,7 +24,7 @@ func Connect() *sql.DB {
 		//if len(DB_CERT_SERVER_CA_PATH) > 0 &&
 		//len(DB_CERT_CLIENT_PATH) > 0 &&
 		//len(DB_CERT_KEY_PATH) > 0 {
-		DBINFO = fmts.Concat("host=", cf.DB_HOST, " port=",
+		DBINFO = fmts.Concat(" host=", cf.DB_HOST, " port=",
 			cf.DB_PORT, " user=", cf.DB_USER,
 			" password=", cf.DB_PASSWORD, " dbname=", cf.DB_NAME,
 			" sslmode=", cf.DB_SSL)
@@ -34,6 +34,7 @@ func Connect() *sql.DB {
 		//" password=", DB_PASSWORD, " dbname=", DB_NAME,
 		//" sslmode=", DB_SSL)
 		//}
+
 		if dbLocal, err = sql.Open(cf.DB_SORCE, DBINFO); err != nil {
 			log.Println("error open:", err)
 			return

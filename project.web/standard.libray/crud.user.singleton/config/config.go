@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/fmts"
+	_ "github.com/lib/pq"
 )
 
 var (
@@ -86,7 +87,7 @@ var (
 	DB_NAME = "user"
 	// DB_HOST     = ""
 	DB_HOST     = "localhost" // container
-	DB_USER     = "carlos"
+	DB_USER     = "postgres"
 	DB_PASSWORD = "20222022"
 	DB_PORT     = "5432"
 	DB_SSL      = "disable"
@@ -114,11 +115,11 @@ type Config struct {
 func init() {
 	if len(ENV_AMBI) <= 0 {
 		// ACESSO REMOTO
-		DB_NAME = ""
-		DB_HOST = ""
+		DB_NAME = "user"
+		DB_HOST = "localhost"
 	} else if ENV_AMBI == "LOCAL" {
-		DB_NAME = ""
-		DB_HOST = ""
+		DB_NAME = "user"
+		DB_HOST = "localhost"
 	} else if ENV_AMBI == "EC2_DB" {
 		DB_NAME = ""
 		DB_HOST = ""
