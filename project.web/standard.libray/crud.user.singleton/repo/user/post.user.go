@@ -1,15 +1,19 @@
 package user
 
 import (
+	"log"
+
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/model/usermodel"
+	pg "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/psql"
 )
 
-func InsertUser(user usermodel.User) (int64, error) {
-	sqlStatement := `INSERT INTO users (name, location, age) VALUES ($1, $2, $3) RETURNING userid`
+func InsertUser(user usermodel.User) error {
+	sqlStatement := `INSERT INTO adphone (name, location, age) VALUES ($1, $2, $3)`
 
-	err := db.QueryRow(sqlStatement, user.Name, user.Location, user.Age)
+	Db := pg.Connect()
+	err := Db.QueryRow(sqlStatement, user.Name, user.Location, user.Age)
 	if err != nil {
-		return id, err
+		log.Println(err)
 	}
-	return id, nil
+	return nil
 }

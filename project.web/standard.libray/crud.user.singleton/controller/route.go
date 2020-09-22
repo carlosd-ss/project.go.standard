@@ -48,6 +48,14 @@ func Routes(cfg cf.Config) *GoServerHttp {
 		//mw.AuthJwtNot([]string{"/products"}),
 		mw.Logger("/")))
 
+	mux.Handle("/user", mw.Use(http.HandlerFunc(handler.CreateUser),
+		//mw.MetricsPrometheusDinamic(),
+		//mw.Cors(),
+		mw.CustomHeaders(),
+		//mw.AutJwt(),
+		//mw.AuthJwtNot([]string{"/products"}),
+		mw.Logger("/user")))
+
 	// withMetrics := mw.MetricsPrometheus(handler)
 	// middpromet := mdlw.Handler("", mux)
 

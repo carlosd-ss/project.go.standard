@@ -1,3 +1,4 @@
+github.com/carlosd-ss/go-cruds v0.0.0-20200818223747-57ee3e9c47a2 h1:lKdpLa9weCl6SOnYdn4wciunoOXIqOo+I1K//Qeb/wc=
 github.com/coreos/go-systemd v0.0.0-20190321100706-95778dfbb74e/go.mod h1:F5haX7vjVVG0kc13fIWeqUViNPyEJxv/OmvnBo0Yme4=
 github.com/jeffotoni/concat v0.0.4 h1:FOmEwTnQUFgn9whwQSv2bKibvZdCT2Fw/pRAD3Qs8hs=
 github.com/jeffotoni/concat v0.0.4/go.mod h1:uiBgJA+SQfPoUYS1c/X1Nx5EozVmqMeNpnH1Qm+jU9k=
