@@ -22,12 +22,10 @@ func Routes(cfg cf.Config) *GoServerHttp {
 
 	///////////////////////////////////////
 	/////
-	// Create our middleware.
-	// mdlw := prommiddleware.NewDefault()
 
 	// DefaultServeMux
 	mux := http.NewServeMux()
-
+	//corsx := cors.Domain()
 	// POST handler /ping
 
 	mux.Handle(Endpoint().Ping, mw.Use(http.HandlerFunc(handler.Ping),
@@ -50,7 +48,7 @@ func Routes(cfg cf.Config) *GoServerHttp {
 	mux.Handle("/", mw.Use(http.HandlerFunc(handler.HomeHandler),
 		mw.CustomHeaders(),
 		mw.Logger("/")))
-
+	//handlerCors := corsx.Handler(mux)
 	APIServer := GoServerHttp{
 		server: &http.Server{
 			Addr: cfg.Host,

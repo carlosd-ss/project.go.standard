@@ -6,22 +6,22 @@ import (
 )
 
 //List ..
-func List(id string) (userjson string) {
+func List(rid string) (name, lastname, id string) {
 	Db := pg.Connect()
-	row := Db.QueryRow(`SELECT * FROM users WHERE id=$1`, id)
-	err := row.Scan(&userjson)
+	row := Db.QueryRow(`SELECT * FROM users WHERE id=$1`, rid)
+	err := row.Scan(&name, &lastname, &id)
 	if err != nil {
 		zerolog.Error(
 			"1.0.0",
 			"user.go",
 			13,
 			"api.crud.user.singleton.com.br",
-			"List user",
+			"Repo List user",
 			err.Error())
-		return "{}"
+		return "", "", ""
 	}
-	if len(userjson) > 0 {
-		return userjson
+	if len(name) > 0 {
+		return name, lastname, id
 	}
-	return "{}"
+	return "", "", ""
 }

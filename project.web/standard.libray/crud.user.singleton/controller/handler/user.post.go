@@ -37,7 +37,7 @@ func handleruserCreate(w http.ResponseWriter, r *http.Request) {
 	//checando se veio o nome
 	if len(p.Name) < 0 {
 		w.WriteHeader(400)
-		w.Write([]byte(`{"erro":"Campo Age obrigatorio!"}`))
+		w.Write([]byte(`{"erro":"Campo Nome obrigatorio!"}`))
 		return
 	}
 
@@ -49,6 +49,6 @@ func handleruserCreate(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(`{"erro":"Cadastrado com sucesso!"}`))
+	w.Write([]byte(`{"msg":"Cadastrado com sucesso!"}`))
 	return
 }

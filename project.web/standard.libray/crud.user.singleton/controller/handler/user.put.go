@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	mUser "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/model/user"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/fmts"
 	repo "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/repo/user"
 )
 
@@ -35,16 +36,17 @@ func handlerupdateUser(id string, w http.ResponseWriter, r *http.Request) {
 	}
 	//checando se veio o nome
 	if len(p.Name) < 0 {
-		jsonmsg := "Campo Age obrigatorio!"
 		w.WriteHeader(400)
-		json.NewEncoder(w).Encode(jsonmsg)
+		w.Write([]byte(`{"erro":"Campo Nome obrigatorio!"}`))
 		return
 	}
 
-	usr := repo.UpdateUser(id, p)
+	if err := repo.UpdateUser(id, p); err != nil {
+		w.WriteHeader(500)
+		w.Write([]byte(fmts.Concat(`{"erro":"`, err.Error(), `"}`)))
+		return
+	}
 	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode(usr)
-	jsonmsg := "usuario cadastrado"
-	json.NewEncoder(w).Encode(jsonmsg)
-
+	w.Write([]byte(`{"msg":"Dados atualizados com sucesso!"}`))
+	return
 }

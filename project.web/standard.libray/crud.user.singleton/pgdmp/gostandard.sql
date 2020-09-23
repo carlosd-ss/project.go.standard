@@ -22,6 +22,7 @@ SET default_table_access_method = heap;
 
 
 CREATE TABLE public.users (
+    id serial,
     first_name character varying(200),
     last_name character varying(200)
 );

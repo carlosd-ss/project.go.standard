@@ -34,6 +34,7 @@ func handlerGetUser(id string, w http.ResponseWriter, r *http.Request) {
 		}
 	*/
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(fmts.Concat(`{"user":"`, repo.List(id), `"}`)))
+	name, lastname, id := repo.List(id)
+	w.Write([]byte(fmts.Concat(`{"user":"`, name, `","lastname":"`, lastname, `","id":`, id, `}`)))
 	return
 }

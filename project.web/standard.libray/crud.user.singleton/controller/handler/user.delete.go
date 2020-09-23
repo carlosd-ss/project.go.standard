@@ -30,7 +30,7 @@ func handlerDeleteUser(id string, w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if repo.Delete(id) {
+	if err := repo.Delete(id); err != nil {
 		w.WriteHeader(http.StatusOK)
 		return
 	}

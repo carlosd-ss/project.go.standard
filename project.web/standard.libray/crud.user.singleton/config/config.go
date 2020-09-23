@@ -101,8 +101,7 @@ var (
 
 /////// DATA BASE
 var (
-	DBNAME = "user"
-	// DB_HOST     = ""
+	DBNAME     = os.Getenv("DB_NAME")
 	DBHOST     = os.Getenv("DB_HOST") // container
 	DBUSER     = os.Getenv("DB_USER")
 	DBPASSWORD = os.Getenv("DB_PASSWORD")
