@@ -1,16 +1,19 @@
-// Go Api server
-// @jeffotoni
-
 package controller
 
+// Go Api server
+// @jeffotoni
+// @ancogamer
+
+//EndpointS ..
 type EndpointS struct {
 	Ping string
 	User string
 }
 
+//Endpoint ..
 func Endpoint() *EndpointS {
 	return &EndpointS{
-		Ping: "/user/ping", // POST/GET
-		User: "/user",      // [DELETE] [GET]
+		Ping: "/ping", // POST/GET
+		User: "/user", // [POST] [GET] [UPDATE] [DELETE]
 	}
 }

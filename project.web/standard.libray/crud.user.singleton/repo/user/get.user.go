@@ -5,14 +5,15 @@ import (
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/zerolog"
 )
 
-func List(uuiduser string) (userjson string) {
+//List ..
+func List(id string) (userjson string) {
 	Db := pg.Connect()
-	row := Db.QueryRow(`SELECT * FROM adphone WHERE uuiduser=$1`, uuiduser)
+	row := Db.QueryRow(`SELECT * FROM users WHERE id=$1`, id)
 	err := row.Scan(&userjson)
 	if err != nil {
 		zerolog.Error(
 			"1.0.0",
-			"get.user.go",
+			"user.go",
 			13,
 			"api.crud.user.singleton.com.br",
 			"List user",

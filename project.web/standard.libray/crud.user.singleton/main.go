@@ -17,10 +17,10 @@ var confserv = cfp.Endpoint()
 
 func main() {
 	serverCfg := cf.Config{
-		Host:           cf.HOST_CONFIG,
+		Host:           cf.HOSTCONFIG,
 		ReadTimeout:    cf.READTIMEOUT,
 		WriteTimeout:   cf.WRITETIMEOUT,
-		MaxHeaderBytes: cf.HOST_MAXBYTE,
+		MaxHeaderBytes: cf.HOSTMAXBYTE,
 	}
 
 	//star server

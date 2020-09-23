@@ -1,19 +1,26 @@
 package user
 
 import (
-	"log"
-
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/model/usermodel"
+	mUser "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/model/user"
 	pg "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/psql"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/zerolog"
 )
 
-func UpdateUser(uuid string, user usermodel.User) error {
-	sqlStatement := `UPDATE INTO adphone (name, location, age) VALUES ($1, $2, $3)`
-
+//UpdateUser ..
+func UpdateUser(id string, user mUser.User) error {
+	//Atualiza todos os valores
+	sqlStatement := `UPDATE INTO users (first_name, last_name) VALUES ($1, $2)`
 	Db := pg.Connect()
-	err := Db.QueryRow(sqlStatement, uuid, user.Name, user.Location, user.Age)
+	_, err := Db.Exec(sqlStatement, id, user.Name, user.Lasname)
 	if err != nil {
-		log.Println(err)
+		zerolog.Error(
+			"1.0.0",
+			"put.go",
+			19,
+			"api.crud.user.singleton.com.br",
+			"Repo Put user",
+			err.Error())
+		return err
 	}
 	return nil
 }

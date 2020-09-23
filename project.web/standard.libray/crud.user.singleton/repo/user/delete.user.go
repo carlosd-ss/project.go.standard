@@ -5,19 +5,20 @@ import (
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/zerolog"
 )
 
-func Delete(userUuid string) bool {
+//Delete ..
+func Delete(id string) error {
 	Db := pg.Connect()
-	dell := `DELETE FROM adphone WHERE uuiduser=$1`
-	_, err := Db.Exec(dell, userUuid)
+	dell := `DELETE FROM users WHERE id=$1`
+	_, err := Db.Exec(dell, id)
 	if err != nil {
 		zerolog.Error(
 			"1.0.0",
 			"delete.user.go",
 			17,
 			"localhost",
-			"Delete",
+			"Repo Delete",
 			err.Error())
-		return false
+		return err
 	}
-	return true
+	return nil
 }

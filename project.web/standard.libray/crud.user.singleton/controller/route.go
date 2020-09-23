@@ -1,7 +1,8 @@
+package controller
+
 // Go Api server
 // @jeffotoni
-
-package controller
+// @ancogamer
 
 import (
 	"net/http"
@@ -10,9 +11,13 @@ import (
 	cf "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/config"
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/controller/handler"
 	mw "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/controller/middleware"
+	"github.com/ulule/limiter"
+	"github.com/ulule/limiter/drivers/middleware/stdlib"
+	"github.com/ulule/limiter/drivers/store/memory"
 	//"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/cors"
 )
 
+//Routes
 func Routes(cfg cf.Config) *GoServerHttp {
 
 	///////////////////////////////////////
@@ -23,15 +28,13 @@ func Routes(cfg cf.Config) *GoServerHttp {
 	// DefaultServeMux
 	mux := http.NewServeMux()
 
-	//corsx := cors.Domain()
-
 	// POST handler /ping
-	handlerApiPing := http.HandlerFunc(handler.Ping)
-	mux.Handle(Endpoint().Ping, mw.Use(handlerApiPing,
+
+	mux.Handle(Endpoint().Ping, mw.Use(http.HandlerFunc(handler.Ping),
 		mw.CustomHeaders(),
 		mw.Gzip(),
 		mw.MaxClients(cf.MaxClients),
-		mw.Logger("user/ping"),
+		mw.Logger("/ping"),
 	))
 
 	///////////////////////////////////////////////////////////
@@ -40,62 +43,29 @@ func Routes(cfg cf.Config) *GoServerHttp {
 	// user
 	// user/{uuid}
 	/////////////////////////////////////
-	mux.Handle("/", mw.Use(http.HandlerFunc(handler.HomeHandler),
-		//mw.MetricsPrometheusDinamic(),
-		//mw.Cors(),
+	mux.Handle("/user", mw.Use(http.HandlerFunc(handler.UserPost),
 		mw.CustomHeaders(),
-		//mw.AutJwt(),
-		//mw.AuthJwtNot([]string{"/products"}),
-		mw.Logger("/")))
-
-	mux.Handle("/user", mw.Use(http.HandlerFunc(handler.CreateUser),
-		//mw.MetricsPrometheusDinamic(),
-		//mw.Cors(),
-		mw.CustomHeaders(),
-		//mw.AutJwt(),
-		//mw.AuthJwtNot([]string{"/products"}),
 		mw.Logger("/user")))
 
-	// withMetrics := mw.MetricsPrometheus(handler)
-	// middpromet := mdlw.Handler("", mux)
+	mux.Handle("/", mw.Use(http.HandlerFunc(handler.HomeHandler),
+		mw.CustomHeaders(),
+		mw.Logger("/")))
 
-	//handlerCors := corsx.Handler(mux)
-
-	// println(cfg.Host)
-	// Create the HTML Server
-	ApiServer := GoServerHttp{
+	APIServer := GoServerHttp{
 		server: &http.Server{
 			Addr: cfg.Host,
-			//Handler: handlerCors,
-			//Handler: middpromet,
-			Handler:      mux,
+			Handler: stdlib.NewMiddleware(limiter.New(memory.NewStore(), limiter.Rate{Formatted: "",
+				Period: 1 * time.Second, Limit: 15})).Handler(mux),
 			ReadTimeout:  time.Millisecond * 600,
 			WriteTimeout: time.Millisecond * 400,
-			//ReadTimeout:  cfg.ReadTimeout,
-			//WriteTimeout: cfg.WriteTimeout,
-			// IdleTimeout:    1000 * time.Millisecond,
-			//MaxHeaderBytes: cfg.MaxHeaderBytes,
 		},
 	}
 
 	// Add to the WaitGroup for the listener goroutine
-	ApiServer.wg.Add(1)
+	APIServer.wg.Add(1)
 
-	// Start the listener
-	//go func() {
 	Show(cfg)
-	ApiServer.server.ListenAndServe()
-	ApiServer.wg.Done()
-	//}()
-
-	// Serve our metrics.
-	// Prometheus
-	// Metrics
-	// go func() {
-	// 	if err := http.ListenAndServe(":"+cfp.PORT_METRICS, promhttp.Handler()); err != nil {
-	// 		log.Printf("Eror while serving metrics: %s", err)
-	// 	}
-	// }()
-
-	return &ApiServer
+	APIServer.server.ListenAndServe()
+	APIServer.wg.Done()
+	return &APIServer
 }

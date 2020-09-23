@@ -6,4 +6,5 @@ require (
 	github.com/jeffotoni/concat v0.0.4
 	github.com/lib/pq v1.8.0
 	github.com/rs/zerolog v1.20.0
+	github.com/ulule/limiter v2.2.2+incompatible
 )
