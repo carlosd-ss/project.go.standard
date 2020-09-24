@@ -34,21 +34,16 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 
 ## Alguns diretórios usados nos layouts e suas estruturas
 ****************************
+
 ### Projetos Web Standard Singleton ☑️
 
 ```_bash
-├── Makefile
-├── Dockerfile
-├── README.md
-├── go.mod
-├── go.sum
-├── main.go
-├── certs
 ├── config
 ├── controler
 │    ├── handler
 │    │   ├── user
 │    │       └── ping.go
+│    │       └── ping_test.go
 │    │       └── get.param.go
 │    │       └── user.post.go
 │    │       └── user.post_test.go
@@ -64,86 +59,233 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 │         └── cors.go
 │         └── custom-header.go
 │         └── gzip.go
-│         └── gzip.go
 │         └── maxclient.go
 │         └── gjwt.go
-├── route
-│     ├── user
-│         └── user.go
+│  └── all.route.go
+│  └── endpoints.go
+│  └── model.server.go
+│  └── show.route.go
+│  └── stopserver.go
 ├── model
 │     ├── user
 │         └── user.go
 ├── pkg
+│   └── cert
+│   └── cors
+│   └── crypt
+│   └── gjwt
+│   └── psql
+│   └── util
+│   └── zerolog
 │   └── fmts
 │       └── fmts.go
 │       └── fmts_test.go
+└── postman
+└── pgdmp
 └── repo
     ├── user
-        └── add.user.go
-        └── add.user_test.go
-        └── del.user.go
-        └── del.user_test.go
-        └── up.user.go
-        └── up.user_test.go
-        └── get.user.go
-        └── get.user_test.go
-```  
-### Projetos Web Standard Two ☑️
-
-```_bash
+        └── user.add.go
+        └── user.add_test.go
+        └── user.del.go
+        └── user.del_test.go
+        └── user.up.go
+        └── user.up_test.go
+        └── user.get.go
+        └── user.get_test.go
 ├── Makefile
 ├── Dockerfile
 ├── README.md
 ├── go.mod
 ├── go.sum
 ├── main.go
-├── certs
+
+```
+
+### Projetos Web Standard DAO ☑️
+
+```_bash
 ├── config
 ├── controler
 │    ├── handler
-│    │   ├── user
-│    │       └── user.go
-│    │       └── user_test.go
+│    │    └── ping.go
+│    │    └── ping_test.go
+│    │    └── model.connect.go
+│    │    └── get.param.go
+│    │    └── user.post.go
+│    │    └── user.post_test.go
+│    │    └── user.put.go
+│    │    └── user.put_test.go
+│    │    └── user.delete.go
+│    │    └── user.delete_test.go
+│    │    └── user.get.go
+│    │    └── user.get_test.go
 │    ├── middleware
-│         └── logger.go
-│         └── gzip.go
+│         └── adapter.go
+│         └── basic.go
 │         └── cors.go
-├── route
-│     ├── user
-│         └── user.go
+│         └── custom-header.go
+│         └── gzip.go
+│         └── maxclient.go
+│         └── gjwt.go
+│  └── all.route.go
+│  └── endpoints.go
+│  └── model.server.go
+│  └── show.route.go
+│  └── stopserver.go
 ├── model
 │     ├── user
 │         └── user.go
 ├── pkg
+│   └── cert
+│   └── cors
+│   └── crypt
+│   └── gjwt
+│   └── psql
+│   └── util
+│   └── zerolog
 │   └── fmts
 │       └── fmts.go
 │       └── fmts_test.go
+└── postman
+└── pgdmp
+└── repo
+    ├── user
+        └── user.add.go
+        └── user.add_test.go
+        └── user.del.go
+        └── user.del_test.go
+        └── user.up.go
+        └── user.up_test.go
+        └── user.get.go
+        └── user.get_test.go
+├── Makefile
+├── Dockerfile
+├── README.md
+├── go.mod
+├── go.sum
+├── main.go
+
+```
+
+### Projetos Web Standard DAO ☑️
+
+```_bash
+├── config
+├── controler
+│    ├── handler
+│    │    └── ping.go
+│    │    └── ping_test.go
+│    │    └── model.connect.go
+│    │    └── get.param.go
+│    │    └── user.go
+│    │    └── user_test.go
+│    ├── middleware
+│         └── mw.go
+│  └── all.route.go
+│  └── endpoints.go
+│  └── model.server.go
+│  └── show.route.go
+│  └── stopserver.go
+├── model
+│     ├── user
+│         └── user.go
+├── pkg
+│   └── cert
+│   └── cors
+│   └── crypt
+│   └── gjwt
+│   └── psql
+│   └── util
+│   └── zerolog
+│   └── fmts
+│       └── fmts.go
+│       └── fmts_test.go
+└── postman
+└── pgdmp
 └── repo
     ├── user
         └── user.go
         └── user_test.go
-```  
+├── Makefile
+├── Dockerfile
+├── README.md
+├── go.mod
+├── go.sum
+├── main.go
+
+```
+
+### Projetos Web Standard DAO Clean ☑️
+
+```_bash
+├── config
+├── controler
+│    ├── handler
+│    │    └── ping.go
+│    │    └── ping_test.go
+│    │    └── model.connect.go
+│    │    └── get.param.go
+│    │    └── user.go
+│    │    └── user_test.go
+│    ├── middleware
+│         └── mw.go
+│  └── route.go
+├── model
+│     ├── user
+│         └── user.go
+├── pkg
+│   └── cert
+│   └── cors
+│   └── crypt
+│   └── gjwt
+│   └── psql
+│   └── util
+│   └── zerolog
+│   └── fmts
+│       └── fmts.go
+│       └── fmts_test.go
+└── postman
+└── pgdmp
+└── repo
+    ├── user
+        └── user.go
+        └── user_test.go
+├── Makefile
+├── Dockerfile
+├── README.md
+├── go.mod
+├── go.sum
+├── main.go
+
+```
+
 ### Projetos Web Clean Arquitecture ☑️
 
 ```_bash
-├── Makefile
-├── README.md
 ├── app
 │   ├── domain
 │   │   ├── model            
 │   │   │     └── user.go
-│   │   │
-│   │   ├── router            
+│   │   ├── router
 │   │   │      └── user.go 
-│   │   │       
-│   │   ├── mocks            
+│   │   ├── mocks
 │   │   │     └── user.go 
 │   │   │     └── user_test.go 
 │   │   ├── repository
+│   │   │     └── cert
+│   │   │     └── cors
+│   │   │     └── crypt
+│   │   │     └── gjwt
+│   │   │     └── psql
+│   │   │     └── util
+│   │   │     └── zerolog
+│   │   │     └── fmts
+│   │   │          └── fmts.go
+│   │   │          └── fmts_test.go
 │   │   └── service
-│   │           └── service.go 
-                └── service_test.go 
-                 
+│   │           └── service.go
+│   │           └── service_test.go
+│   │
 │   ├── interface
 │   │   ├── persistence
 │   │   └── rpc
@@ -152,15 +294,19 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 ├── cmd
 │    └── main.go
 └── vendor
-│   ├── vendor packages
+│   ├── packages
+├── Makefile
+├── Dockerfile
+├── README.md
+├── go.mod
+├── go.sum
+├── main.go
 └──
 ```    
 
 ### Projetos Web microservice Grpc ☑️
 
 ```_bash
-├── Makefile
-├── README.md
 ├── certs
 │     └── server.crt
 │     └── server.csr
@@ -185,18 +331,18 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 │   ├── customer
 │   │     └── customer.go
 │   │     └── customer.proto
-└──
-```    
-
-### Projetos Web fragment service 
-
-```_bash
 ├── Makefile
 ├── Dockerfile
 ├── README.md
 ├── go.mod
 ├── go.sum
 ├── main.go
+└──
+```    
+
+### Projetos Web fragment service 
+
+```_bash
 ├── certs
 ├── config
 ├── controler
@@ -223,6 +369,14 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
      └── user
         └── add.user.go
         └── add.user_test.go
+├── Makefile
+├── Dockerfile
+├── README.md
+├── go.mod
+├── go.sum
+├── main.go
+└──
+
 ```  
 
 
@@ -268,10 +422,12 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 ```_bash
 ├── Makefile
 ├── README.md
-
+├── Dockerfile
+├── go.mod
+├── go.sum
+├── main.go
+└──
 ```   
-
-
 
 ## 🔗 Links relacionados
 
