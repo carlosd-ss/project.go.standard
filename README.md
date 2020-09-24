@@ -101,6 +101,50 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 
 ```
 
+### Projetos Web Standard Singleton Clean ☑️
+
+```_bash
+├── config
+├── controler
+│    ├── handler
+│    │   ├── user
+│    │       └── ping.go
+│    │       └── ping_test.go
+│    │       └── get.param.go
+│    │       └── user.go
+│    │       └── user_test.go
+│    ├── middleware
+│         └── mw.go
+│  └── route.go
+├── model
+│     ├── user
+│         └── user.go
+├── pkg
+│   └── cert
+│   └── cors
+│   └── crypt
+│   └── gjwt
+│   └── psql
+│   └── util
+│   └── zerolog
+│   └── fmts
+│       └── fmts.go
+│       └── fmts_test.go
+└── postman
+└── pgdmp
+└── repo
+    ├── user
+        └── user.go
+        └── user_test.go
+├── Makefile
+├── Dockerfile
+├── README.md
+├── go.mod
+├── go.sum
+├── main.go
+
+```
+
 ### Projetos Web Standard DAO ☑️
 
 ```_bash
@@ -158,54 +202,6 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
         └── user.up_test.go
         └── user.get.go
         └── user.get_test.go
-├── Makefile
-├── Dockerfile
-├── README.md
-├── go.mod
-├── go.sum
-├── main.go
-
-```
-
-### Projetos Web Standard DAO ☑️
-
-```_bash
-├── config
-├── controler
-│    ├── handler
-│    │    └── ping.go
-│    │    └── ping_test.go
-│    │    └── model.connect.go
-│    │    └── get.param.go
-│    │    └── user.go
-│    │    └── user_test.go
-│    ├── middleware
-│         └── mw.go
-│  └── all.route.go
-│  └── endpoints.go
-│  └── model.server.go
-│  └── show.route.go
-│  └── stopserver.go
-├── model
-│     ├── user
-│         └── user.go
-├── pkg
-│   └── cert
-│   └── cors
-│   └── crypt
-│   └── gjwt
-│   └── psql
-│   └── util
-│   └── zerolog
-│   └── fmts
-│       └── fmts.go
-│       └── fmts_test.go
-└── postman
-└── pgdmp
-└── repo
-    ├── user
-        └── user.go
-        └── user_test.go
 ├── Makefile
 ├── Dockerfile
 ├── README.md
