@@ -31,9 +31,11 @@ crud.postgres
  			put.go
  			delete.go
  			get.go
+    - dmp
  	- model
  		- user	
  		   user.go
+  
 
  	- pkg
  		- cors
@@ -48,5 +50,7 @@ crud.postgres
  			gjwt.go
  		- psql
  			connect.go
+    - postman
+        
 
  ```
