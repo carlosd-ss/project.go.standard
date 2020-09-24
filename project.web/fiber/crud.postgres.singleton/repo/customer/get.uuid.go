@@ -3,8 +3,8 @@ package rcustomer
 import (
 	"encoding/json"
 
+	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/psql"
 	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/models/customer"
-	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/pkg/psql"
 )
 
 func GetUuid(uuid string) (string, error) {

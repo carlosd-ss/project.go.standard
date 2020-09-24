@@ -5,7 +5,7 @@ package controller
 
 import (
 	cf "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/config"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/fmts"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/internal/fmts"
 )
 
 //Show log

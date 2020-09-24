@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/internal/fmts"
 	mUser "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/model/user"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/fmts"
 	repo "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/repo/user"
 )
 

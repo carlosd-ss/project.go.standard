@@ -5,16 +5,17 @@ package controller
 // @ancogamer
 
 import (
+	"net/http"
+	"time"
+
 	"github.com/ulule/limiter"
 	"github.com/ulule/limiter/drivers/middleware/stdlib"
 	"github.com/ulule/limiter/drivers/store/memory"
-	"net/http"
-	"time"
 
 	cf "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/config"
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/controller/handler"
 	mw "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/controller/middleware"
-	//"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/cors"
+	//"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/internal/cors"
 )
 
 //Routes
@@ -28,7 +29,7 @@ func Routes(cfg cf.Config) *GoServerHttp {
 	//corsx := cors.Domain()
 	// POST handler /ping
 
-	mux.Handle(Endpoint().Ping, mw.Use( stdlib.NewMiddleware(limiter.New(memory.NewStore(), limiter.Rate{Formatted: "",
+	mux.Handle(Endpoint().Ping, mw.Use(stdlib.NewMiddleware(limiter.New(memory.NewStore(), limiter.Rate{Formatted: "",
 		Period: 1 * time.Second, Limit: 1})).Handler(http.HandlerFunc(handler.Ping)),
 		mw.CustomHeaders(),
 		mw.Gzip(),
@@ -42,7 +43,7 @@ func Routes(cfg cf.Config) *GoServerHttp {
 	// user
 	// user/{uuid}
 	/////////////////////////////////////
-	mux.Handle("/user", mw.Use( stdlib.NewMiddleware(limiter.New(memory.NewStore(), limiter.Rate{Formatted: "",
+	mux.Handle("/user", mw.Use(stdlib.NewMiddleware(limiter.New(memory.NewStore(), limiter.Rate{Formatted: "",
 		Period: 1 * time.Second, Limit: 15})).Handler(http.HandlerFunc(handler.UserPost)),
 		mw.CustomHeaders(),
 		mw.Logger("/user")))
@@ -55,8 +56,8 @@ func Routes(cfg cf.Config) *GoServerHttp {
 
 	APIServer := GoServerHttp{
 		server: &http.Server{
-			Addr: cfg.Host,
-			Handler:mux,
+			Addr:         cfg.Host,
+			Handler:      mux,
 			ReadTimeout:  time.Millisecond * 600,
 			WriteTimeout: time.Millisecond * 400,
 		},
@@ -64,16 +65,16 @@ func Routes(cfg cf.Config) *GoServerHttp {
 	//handlerCors := corsx.Handler(mux)
 	// Isto ira atribuir o rate limit para todos os endpoints
 	/*
-	APIServer := GoServerHttp{
-		server: &http.Server{
-			Addr: cfg.Host,
-			Handler: stdlib.NewMiddleware(limiter.New(memory.NewStore(), limiter.Rate{Formatted: "",
-				Period: 1 * time.Second, Limit: 15})).Handler(mux),
-			ReadTimeout:  time.Millisecond * 600,
-			WriteTimeout: time.Millisecond * 400,
-		},
-	}
-*/
+		APIServer := GoServerHttp{
+			server: &http.Server{
+				Addr: cfg.Host,
+				Handler: stdlib.NewMiddleware(limiter.New(memory.NewStore(), limiter.Rate{Formatted: "",
+					Period: 1 * time.Second, Limit: 15})).Handler(mux),
+				ReadTimeout:  time.Millisecond * 600,
+				WriteTimeout: time.Millisecond * 400,
+			},
+		}
+	*/
 	// Add to the WaitGroup for the listener goroutine
 	APIServer.wg.Add(1)
 

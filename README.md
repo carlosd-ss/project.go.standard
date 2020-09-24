@@ -69,7 +69,7 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 ├── model
 │     ├── user
 │         └── user.go
-├── pkg
+├── internal
 │   └── cert
 │   └── cors
 │   └── crypt
@@ -119,7 +119,7 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 ├── model
 │     ├── user
 │         └── user.go
-├── pkg
+├── internal
 │   └── cert
 │   └── cors
 │   └── crypt
@@ -179,7 +179,7 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 ├── model
 │     ├── user
 │         └── user.go
-├── pkg
+├── internal
 │   └── cert
 │   └── cors
 │   └── crypt
@@ -229,7 +229,7 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 ├── model
 │     ├── user
 │         └── user.go
-├── pkg
+├── internal
 │   └── cert
 │   └── cors
 │   └── crypt
@@ -317,7 +317,7 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 ├── docker
 │   └── Dockerfile
 │   └── Makefile
-├── pkg
+├── internal
 │   └── fmts
 │   └── grpc
 └── proto
@@ -357,7 +357,7 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 ├── model
 │     └──  user
 │         └── user.go
-├── pkg
+├── internal
 │   └── fmts
 │       └── fmts.go
 │       └── fmts_test.go
@@ -389,7 +389,7 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 │   ├── Makefile
 │   ├── models
 │   │   ├── user.go
-│   └── pkg
+│   └── internal
 │       ├── user
 │       │   └── publicar.go
 │       └── sqs
@@ -402,7 +402,7 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 │   ├── models
 │   │   ├── sqs.customer.go
 │   │   ├── return.customer.go
-│   └── pkg
+│   └── internal
 │       ├── customer
 │       │   └── publicar.go
 │       └── sqs

@@ -1,8 +1,8 @@
 package hcustomer
 
 import (
+	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/fmts"
 	mErrors "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/models/errors"
-	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/pkg/fmts"
 	rcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/repo/customer"
 	"github.com/gofiber/fiber"
 )

@@ -3,9 +3,9 @@ package rcustomer
 import (
 	"errors"
 
+	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/internal/fmts"
+	db "github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/internal/psql"
 	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/models/customer"
-	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/pkg/fmts"
-	db "github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/pkg/psql"
 )
 
 func Update(customer mcustomer.Customer) error {

@@ -5,8 +5,8 @@ import (
 
 	mErrors "github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/models/errors"
 
+	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/internal/fmts"
 	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/models/customer"
-	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/pkg/fmts"
 	rcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/repo/customer"
 )
 

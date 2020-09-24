@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/pkg/fmts"
+	"github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/internal/fmts"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )

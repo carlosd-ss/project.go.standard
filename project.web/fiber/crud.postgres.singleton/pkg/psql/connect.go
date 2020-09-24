@@ -7,7 +7,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/pkg/fmts"
+	"github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/fmts"
 	_ "github.com/lib/pq"
 )
 

@@ -1,9 +1,9 @@
 package user
 
 import (
+	pg "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/internal/psql"
+	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/internal/zerolog"
 	mUser "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/model/user"
-	pg "github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/psql"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/pkg/zerolog"
 )
 
 //UpdateUser ..

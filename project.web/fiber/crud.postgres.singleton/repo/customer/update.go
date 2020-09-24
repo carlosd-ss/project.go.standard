@@ -3,9 +3,9 @@ package rcustomer
 import (
 	"errors"
 
+	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/fmts"
+	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/psql"
 	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/models/customer"
-	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/pkg/fmts"
-	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/pkg/psql"
 )
 
 func Update(customer mcustomer.Customer) error {

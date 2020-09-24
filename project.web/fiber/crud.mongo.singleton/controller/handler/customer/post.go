@@ -1,9 +1,9 @@
 package hcustomer
 
 import (
+	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/internal/fmts"
 	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/models/customer"
 	mErrors "github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/models/errors"
-	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/pkg/fmts"
 	rcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/repo/customer"
 	"github.com/gofiber/fiber"
 )
