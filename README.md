@@ -25,7 +25,12 @@ nos envie issues ou pull requests ❤️.
 
 Neste projeto existe um diretório específico para abordar os Patterns que podemos desenvolver utilizando Go é uma introdução que vamos enrriquecer ao longo do tempo com os exemplos práticos.
 
-Voltando ao Layout e organização de projetos quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o projeto começa a crescer neste cenário iremos precisar de um padrão arquitetural ou um layout para organizar nossos projetos em Go e um dos pontos mais importantes mantê-lo. O que irá encontrar neste repositório são diversos modelos de layout e organização de projetos em diversos cenários e aplicabilidades. Não temos a pretenção de apresentar todas as possibilidades isto seria insano, mas vamos mostrar alguns que poderam ajuda-lo e talvez possamos até ajuda-lo a ficar mais inspirado com tudo e criar o seu próprio modelo de layout e tenha certeza que iriamos ficar super felizes com isto ❤️.
+Voltando ao Layout e organização de projetos quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o projeto começa a crescer neste cenário iremos precisar de um padrão arquitetural ou um layout para organizar nossos projetos em Go e um dos pontos mais importantes mantê-lo. O que irá encontrar neste repositório são diversos modelos de layout e organização de projetos em diversos cenários e aplicabilidades.
+
+Não temos a pretenção de apresentar todas as possibilidades isto seria insano,
+mas vamos mostrar alguns que poderam facilitar seu dia a dia em seus projetos
+e talvez possamos até influencia-lo a criar o seu próprio modelo de layout e
+tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compartilhe sempre conosco para colaborar com a comunidade.
 
 ## Alguns diretórios usados nos layouts e suas estruturas
 ****************************

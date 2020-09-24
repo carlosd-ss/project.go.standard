@@ -7,9 +7,10 @@
 ](https://img.shields.io/badge/POSTGRESQL-%23336791?style=for-the-badge&logo=PostgreSQL&logoColor=%23336791&labelColor=%23444444)
 ![MONGODB](https://img.shields.io/badge/MONGO-%237A248?style=for-the-badge&logo=MongoDB&labelColor=%23444444)
 
-Este repositório irá ajuda-lo a visualizar e tentar apresentar a você uma coleção e patterns que são utilizados na linguagem Go.design
+Este repositório irá ajuda-lo a visualizar e tentar apresentar a você uma coleção e patterns que são utilizados na linguagem Go.
 
-Sabemos que a linguagem Go é uma linguagem de multi-paradigmas porém o paradigma imperativo e concorrente ❤️ são os mais predominantes da linguagem e devido a isto temos vários patterns para conncorrência e um arsenal na standard libray da Linguagem Go ❤️ para concorrência.
+Sabemos que a linguagem Go é uma linguagem de multi-paradigmas porém os paradigmas **Imperativo** e **Concorrente** ❤️
+são os mais predominantes da linguagem e possuímos um arsenal na **standard library** da Linguagem Go ❤️ voltado a programação concorrente.
 
 
 ### Patterns de Criação
