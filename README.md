@@ -436,6 +436,29 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 
 ```
 
+### Projetos Simples e eficientes ☑️
+
+```_bash
+├── cmd
+│   └── client
+│       └── main.go
+└── internal
+    ├── app
+    │   └── app.go
+    ├── config
+    │   └── config.go
+    ├── pkg
+    │   ├── http
+    │   │   ├── router.go
+    │   │   └── server.go
+    │   └── rabbitmq
+    │       └── rabbitmq.go
+    └── user
+        ├── amqp.go
+        └── create.go
+
+```
+
 ### Projetos Lib 
 
 
