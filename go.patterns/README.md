@@ -1,4 +1,4 @@
-![Go](https://github.com/jeffotoni/project.go.standard/blob/master/.github/go.png)
+![Go](https://github.com/jeffotoni/project.go.standard/blob/master/.github/go-patterns.png)
 
 # Project Go Patterns
 
