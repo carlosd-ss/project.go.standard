@@ -34,7 +34,7 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 
 ## Alguns diretórios usados nos layouts e suas estruturas
 ****************************
-### Projetos Web Standard One ☑️
+### Projetos Web Standard Singleton ☑️
 
 ```_bash
 ├── Makefile
@@ -48,18 +48,25 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 ├── controler
 │    ├── handler
 │    │   ├── user
-│    │       └── post.user.go
-│    │       └── post.user_test.go
-│    │       └── put.user.go
-│    │       └── put.user_test.go
-│    │       └── delete.user.go
-│    │       └── delete.user_test.go
-│    │       └── get.user.go
-│    │       └── get.user_test.go
+│    │       └── ping.go
+│    │       └── get.param.go
+│    │       └── user.post.go
+│    │       └── user.post_test.go
+│    │       └── user.put.go
+│    │       └── user.put_test.go
+│    │       └── user.delete.go
+│    │       └── user.delete_test.go
+│    │       └── user.get.go
+│    │       └── user.get_test.go
 │    ├── middleware
-│         └── logger.go
-│         └── gzip.go
+│         └── adapter.go
+│         └── basic.go
 │         └── cors.go
+│         └── custom-header.go
+│         └── gzip.go
+│         └── gzip.go
+│         └── maxclient.go
+│         └── gjwt.go
 ├── route
 │     ├── user
 │         └── user.go
