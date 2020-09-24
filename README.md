@@ -14,11 +14,18 @@ O que estamos tentando fazer por aqui é documentar e apresentar alguns modelos 
 
 Todo este repositório foi feito baseado na linguagem Go 😍, da nossa humilde experiência de utilização em nosso dia a dia como Linguagem principal em nossos projetos, então você está convidado a nos enviar issues, pull requests o que achar necessário para que possamos melhorar nosso repositório de layouts padrões para projetos em Go. 
 
-Quando iniciamos em Go e precisamos fazer algo muito simples, nem é necessário um padrão ou layout isto torna-se um exagero eu diria desnesessário talvez um main.go já resolveria seu problema, sempre da preferência para o mais simples, o mais enxuto possível a utilização de menas libs externass possível e inúmeras outras boas práticas que podem adotar em seus projetos sempre é um caminho interessante a seguir.
+Quando iniciamos em Go e precisamos fazer algo muito simples, nem é necessário um padrão ou layout isto torna-se um exagero eu diria desnesessário talvez um main.go já resolveria seu problema, sempre da preferência para o mais simples, o mais enxuto possível a utilização de menas libs externas possíveis e inúmeras outras boas práticas que podem adotar em seus projetos sempre é um caminho interessante a seguir.
 
-É interessante em um segundo momento é claro neste mesmo projeto, abordar algumas boas práticas que podemos adotar utilizando Go como por exemplo utilizações e construções desnecessárias e mirabolates, utilização sem necessidade de ponteiros, mas a princípio iremos iniciar com a organização do layout do seu projeto para depois avançarmos ainda mais e proporcionar algo mais neste projeto como os padrões e pattern que adotamos como programamos de forma concorrente utilizando Go 😍. 
+É interessante em um segundo momento é claro neste mesmo projeto, abordar algumas boas práticas
+que podemos adotar utilizando Go como por exemplo utilizações e construções desnecessárias e mirabolates
+um bom exemplo seria a utilização sem necessidade e de forma desacerbada quando o assunto é utilizar os ponteiros, mas a princípio iremos iniciar com
+a organização do layout do seu projeto para depois avançarmos ainda mais e proporcionar
+algo mais neste projeto apesar de que os exemplos práticos apresentados já estão de uma forma bem bacaninha mas longe da perfeição e caso percebam que pode melhorar por favor
+nos envie issues ou pull requests ❤️.
 
-Voltando ao Layout e organização de projetos quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o projeto começa a crescer neste cenário iremos precisar de um padrão arquitetural ou um layout para organizar nossos projetos em Go e um dos pontos mais importantes mante-lo. O que irá encontrar neste repositório são diversos modelos de layout e organização de projetos em diversos cenários e aplicabilidades. Não temos a pretenção de apresentar todas as possibilidades isto seria insano, mas vamos mostrar alguns que poderam ajuda-lo e talvez possamos até ajuda-lo a ficar mais inspirado com tudo e criar o seu próprio modelo de layout e tenha certeza que iriamos ficar super felizes com isto ❤️.
+Neste projeto existe um diretório específico para abordar os Patterns que podemos desenvolver utilizando Go é uma introdução que vamos enrriquecer ao longo do tempo com os exemplos práticos.
+
+Voltando ao Layout e organização de projetos quando seu projeto envolver mais pessoas para colaborar, uma equipe etc, e o projeto começa a crescer neste cenário iremos precisar de um padrão arquitetural ou um layout para organizar nossos projetos em Go e um dos pontos mais importantes mantê-lo. O que irá encontrar neste repositório são diversos modelos de layout e organização de projetos em diversos cenários e aplicabilidades. Não temos a pretenção de apresentar todas as possibilidades isto seria insano, mas vamos mostrar alguns que poderam ajuda-lo e talvez possamos até ajuda-lo a ficar mais inspirado com tudo e criar o seu próprio modelo de layout e tenha certeza que iriamos ficar super felizes com isto ❤️.
 
 ## Alguns diretórios usados nos layouts e suas estruturas
 ****************************
