@@ -10,27 +10,27 @@ type CustomerPost struct {
 	ImpUserUpdate string `json:"imp_user_update"`
 
 	Channel string `json:"channel"`
-	UserID  string `json:"userId"`
+	UserID  string `json:"user_id"`
 
 	Customer Customer
 }
 
 type Customer struct {
 	Name              string `json:"name"`
-	BirthDate         string `json:"birthDate"`
+	BirthDate         string `json:"birth_date"`
 	Sex               string `json:"sex"`
-	MotherName        string `json:"motherName"`
+	MotherName        string `json:"mother_name"`
 	Type              string `json:"type"`
-	MaritalStatus     string `json:"maritalStatus"`
+	MaritalStatus     string `json:"marital_status"`
 	Email             string `json:"email"`
 	Phone             string `json:"phone"`
 	Phone2            string `json:"phone2"`
 	Phone3            string `json:"phone3"`
 	Emancipated       string `json:"emancipated"`
-	IncomeReported    string `json:"incomeReported"`
-	ValueInConcurrent string `json:"valueInConcurrent"`
+	IncomeReported    string `json:"income_reported"`
+	ValueInConcurrent string `json:"value_in_concurrent"`
 	Nationality       string `json:"nationality"`
-	RuralObligation   string `json:"ruralObligation"`
+	RuralObligation   string `json:"rural_obligation"`
 	Title             string `json:"title"`
 	Illiterate        string `json:"illiterate"`
 	Document          Document
@@ -45,15 +45,15 @@ type Customer struct {
 type Document struct {
 	Type         string `json:"type"`
 	Number       string `json:"number"`
-	ValidityDate string `json:"validityDate"`
-	IssueDate    string `json:"issueDate"`
-	IssuerAgency string `json:"issuerAgency"`
-	IssuerState  string `json:"issuerState"`
+	ValidityDate string `json:"validity_date"`
+	IssueDate    string `json:"issue_date"`
+	IssuerAgency string `json:"issuer_agency"`
+	IssuerState  string `json:"issuer_state"`
 }
 
 type Disabilities struct {
-	HasDisability  bool   `json:"hasDisability"`
-	DisabilityKind string `json:"disabilityKind"`
+	HasDisability  bool   `json:"has_disability"`
+	DisabilityKind string `json:"disability_kind"`
 }
 
 type SocialMedias struct {
@@ -62,8 +62,8 @@ type SocialMedias struct {
 }
 
 type Address struct {
-	StreetType      string `json:"streetType"`
-	StreetName      string `json:"streetName"`
+	StreetType      string `json:"street_type"`
+	StreetName      string `json:"street_name"`
 	Number          string `json:"number"`
 	Complement      string `json:"complement"`
 	Neighborhood    string `json:"neighborhood"`
@@ -71,55 +71,55 @@ type Address struct {
 	City            string `json:"city"`
 	State           string `json:"state"`
 	Special         string `json:"special"`
-	PostalCode      string `json:"postalCode"`
+	PostalCode      string `json:"postal_code"`
 	Country         string `json:"country"`
 	Reference       bool   `json:"reference"`
 	Apartment       string `json:"apartment"`
-	ComplementType1 string `json:"complementType1"`
-	ComplementDesc1 string `json:"complementDesc1"`
-	ComplementType2 string `json:"complementType2"`
-	ComplementDesc2 string `json:"complementDesc2"`
-	ComplementType3 string `json:"complementType3"`
-	ComplementDesc3 string `json:"complementDesc3"`
+	ComplementType1 string `json:"complement_type1"`
+	ComplementDesc1 string `json:"complement_desc1"`
+	ComplementType2 string `json:"complement_type2"`
+	ComplementDesc2 string `json:"complement_desc2"`
+	ComplementType3 string `json:"complement_type3"`
+	ComplementDesc3 string `json:"complement_desc3"`
 }
 
 type CompanyInfo struct {
-	TaxExempted                string `json:"taxExempted"`
-	StateRegistration          string `json:"stateRegistration"`
-	StateRegistrationIssuer    string `json:"stateRegistrationIssuer"`
-	StateRegistrationState     string `json:"stateRegistrationState"`
-	StateRegistrationCity      string `json:"stateRegistrationCity"`
-	MunicipalRegistration      string `json:"municipalRegistration"`
-	MunicipalRegistrationCity  string `json:"municipalRegistrationCity"`
-	MunicipalRegistrationState string `json:"municipalRegistrationState"`
-	SocialCapital              string `json:"socialCapital"`
+	TaxExempted                string `json:"tax_exempted"`
+	StateRegistration          string `json:"state_registration"`
+	StateRegistrationIssuer    string `json:"state_registrationIssuer"`
+	StateRegistrationState     string `json:"state_registrationState"`
+	StateRegistrationCity      string `json:"state_registrationCity"`
+	MunicipalRegistration      string `json:"municipal_registration"`
+	MunicipalRegistrationCity  string `json:"municipal_registration_city"`
+	MunicipalRegistrationState string `json:"municipal_registrationState"`
+	SocialCapital              string `json:"social_capital"`
 	Phone                      string `json:"phone"`
 	Phone2                     string `json:"phone2"`
 	Phone3                     string `json:"phone3"`
 	Email                      string `json:"email"`
-	FoundationDate             string `json:"foundationDate"`
-	EmployeesNumber            string `json:"employeesNumber"`
-	LegalNature                string `json:"legalNature"`
-	CompanySize                string `json:"companySize"`
-	EnterpriseGroup            string `json:"enterpriseGroup"`
-	ActivityBranch             string `json:"activityBranch"`
+	FoundationDate             string `json:"foundation_date"`
+	EmployeesNumber            string `json:"employees_number"`
+	LegalNature                string `json:"legal_nature"`
+	CompanySize                string `json:"company_size"`
+	EnterpriseGroup            string `json:"enterprise_group"`
+	ActivityBranch             string `json:"activity_branch"`
 	Cnae                       string `json:"cnae"`
-	CnaeDesc                   string `json:"cnaeDesc"`
-	CnaeSec                    string `json:"cnaeSec"`
-	CnaeSecDesc                string `json:"cnaeSecDesc"`
-	LegalNatureID              string `json:"legalNatureId"`
-	CoverageIntelig            string `json:"coverageIntelig"`
-	PresumedBilling            string `json:"presumedBilling"`
-	MarketSegment              string `json:"marketSegment"`
-	WalletBelonging            string `json:"walletBelonging"`
-	RuralObligation            string `json:"ruralObligation"`
+	CnaeDesc                   string `json:"cnae_desc"`
+	CnaeSec                    string `json:"cnae_sec"`
+	CnaeSecDesc                string `json:"cnae_sec_desc"`
+	LegalNatureID              string `json:"legal_natureId"`
+	CoverageIntelig            string `json:"coverage_intelig"`
+	PresumedBilling            string `json:"presumed_billing"`
+	MarketSegment              string `json:"market_segment"`
+	WalletBelonging            string `json:"wallet_belonging"`
+	RuralObligation            string `json:"rural_obligation"`
 }
 
 type Contact struct {
 	Type            string `json:"type"`
 	Name            string `json:"name"`
-	BirthDate       string `json:"birthDate"`
-	SocialSecNo     string `json:"socialSecNo"`
+	BirthDate       string `json:"birth_date"`
+	SocialSecNo     string `json:"social_sec_no"`
 	Sex             string `json:"sex"`
 	Email           string `json:"email"`
 	ContactDocument ContactDocument
@@ -129,13 +129,13 @@ type Contact struct {
 type ContactDocument struct {
 	Type         string `json:"type"`
 	Number       string `json:"number"`
-	IssuerState  string `json:"issuerState"`
-	IssuerAgency string `json:"issuerAgency"`
+	IssuerState  string `json:"issuer_state"`
+	IssuerAgency string `json:"issuer_agency"`
 }
 
 type ContactAddress struct {
-	StreetType   string `json:"streetType"`
-	StreetName   string `json:"streetName"`
+	StreetType   string `json:"street_type"`
+	StreetName   string `json:"street_name"`
 	Number       string `json:"number"`
 	Complement   string `json:"complement"`
 	Neighborhood string `json:"neighborhood"`
