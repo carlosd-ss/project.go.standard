@@ -22,7 +22,6 @@ func Connect() *sql.DB {
 		if dbLocal != nil {
 			return
 		}
-		print(cf.DBNAME)
 		var DBINFO string
 		DBINFO = fmts.Concat(" host=", cf.DBHOST, " port=",
 			cf.DBPORT, " user=", cf.DBUSER,

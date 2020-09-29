@@ -12,7 +12,6 @@ import (
 
 // substr (text, 2, 30)
 func Substr(value string, leni, lenf int) string {
-
 	if len(value) < leni {
 		return ""
 	}
