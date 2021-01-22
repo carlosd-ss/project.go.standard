@@ -1,15 +1,15 @@
 package rcustomer
 
 import (
+	"database/sql"
 	"encoding/json"
 
-	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/psql"
-	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/models/customer"
+	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/models/customer"
 )
 
-func GetUuid(uuid string) (string, error) {
-	db := db.Connect()
-	var customer mcustomer.Customer
+func GetUuid(db *sql.DB, uuid string) (string, error) {
+
+	var customer mcustomer.CustomerPost
 	sqlexec := `
 	SELECT 
 		imp_id,

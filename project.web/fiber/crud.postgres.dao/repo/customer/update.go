@@ -1,15 +1,15 @@
 package rcustomer
 
 import (
+	"database/sql"
 	"errors"
 
-	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/fmts"
-	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/psql"
-	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/models/customer"
+	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/models/customer"
+	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/pkg/fmts"
 )
 
-func Update(customer mcustomer.Customer) error {
-	db := db.Connect()
+func Update(db *sql.DB, customer mcustomer.CustomerPost) error {
+
 	//Those ones that are not here on the insert, are default fields
 	sqlexec := `UPDATE ad_customer SET imp_user_update = $1`
 

@@ -1,13 +1,12 @@
 package rcustomer
 
 import (
+	"database/sql"
 	"errors"
-
-	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/psql"
 )
 
-func Delete(uuid string) error {
-	db := db.Connect()
+func Delete(db *sql.DB, uuid string) error {
+
 	//Those ones that are not here on the insert, are default fields
 	sqlexec := `DELETE from ad_customer WHERE  imp_uuid = $1`
 	res, err := db.Exec(sqlexec, uuid)

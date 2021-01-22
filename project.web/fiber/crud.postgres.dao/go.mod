@@ -1,4 +1,4 @@
-module github.com/go.standard.project.layout/project.web/fiber/crud.postgresa
+module github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao
 
 go 1.14
 
@@ -7,6 +7,6 @@ require (
 	github.com/gofiber/cors v0.1.0
 	github.com/gofiber/fiber v1.11.0
 	github.com/lib/pq v1.7.0
-	github.com/rs/zerolog v1.19.0
-	go.mongodb.org/mongo-driver v1.3.4
+	github.com/rs/zerolog v1.19.0 // indirect
+	go.mongodb.org/mongo-driver v1.3.4 // indirect
 )

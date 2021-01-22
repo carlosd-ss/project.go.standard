@@ -1,17 +1,29 @@
 package main
 
 import (
-	"github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/controller/route"
-	"github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/fmts"
+	"log"
+
+	hcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/controller/handler/customer"
+	"github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/pkg/psql"
+
+	"github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/controller/route"
+	"github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/pkg/fmts"
+
 	"github.com/gofiber/fiber"
 )
 
 func main() {
+	s := hcustomer.Server{
+		Db: psql.Connect(),
+	}
+	defer s.Db.Close()
+
 	app := fiber.New()
-
-	route.AllRoutes(app)
-
-	app.Listen(8181)
-
+	route.AllRoutes(&s, app)
+	err := app.Listen(8181)
+	if err != nil {
+		log.Println(err)
+		return
+	}
 	fmts.Println("Server Started!")
 }

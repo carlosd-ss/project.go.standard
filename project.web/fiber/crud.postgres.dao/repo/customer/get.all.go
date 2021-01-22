@@ -1,16 +1,16 @@
 package rcustomer
 
 import (
+	"database/sql"
 	"encoding/json"
 
-	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/fmts"
-	db "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/internal/psql"
-	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/models/customer"
+	mcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/models/customer"
+	fmts "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/pkg/fmts"
 )
 
-func GetAll(offset string, limit string) ([]string, error) {
-	db := db.Connect()
-	var customer mcustomer.Customer
+func GetAll(db *sql.DB, offset string, limit string) ([]string, error) {
+
+	var customer mcustomer.CustomerPost
 	sqlexec := `
 	SELECT 
 		imp_uuid,

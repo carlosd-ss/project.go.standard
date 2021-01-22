@@ -1,16 +1,16 @@
 package route
 
 import (
+	hcustomer "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/controller/handler/customer"
 	"github.com/gofiber/cors"
 	"github.com/gofiber/fiber"
 	mw "github.com/gofiber/fiber/middleware"
 
-	handlerImp "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/controller/handler/customer"
-	handlerPing "github.com/go.standard.project.layout/project.web/fiber/crud.postgresa/controller/handler/ping"
+	handlerPing "github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/controller/handler/ping"
 )
 
 //
-func AllRoutes(app *fiber.App) {
+func AllRoutes(s *hcustomer.Server, app *fiber.App) {
 	////
 	app.Use(cors.New())
 	app.Use(mw.Compress(mw.CompressLevelBestSpeed))
@@ -24,9 +24,9 @@ func AllRoutes(app *fiber.App) {
 	// multipart/form-data
 
 	//customer (customer) 	// application/json
-	app.Post("/v1/customer", handlerImp.Post)
-	app.Get("/v1/customer/:offset/:limit", handlerImp.GetAll)
-	app.Get("/v1/customer/:uuid", handlerImp.GetUuid)
-	app.Delete("/v1/customer/:uuid", handlerImp.Delete)
-	app.Put("/v1/customer", handlerImp.Update)
+	app.Post("/v1/customer", s.Post)
+	app.Get("/v1/customer/:offset/:limit", s.GetAll)
+	app.Get("/v1/customer/:uuid", s.GetUuid)
+	app.Delete("/v1/customer/:uuid", s.Delete)
+	app.Put("/v1/customer", s.Update)
 }
