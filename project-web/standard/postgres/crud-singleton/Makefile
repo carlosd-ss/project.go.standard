@@ -8,7 +8,7 @@ PORT_SERVER = 5209
 
 build:
 	@echo "########## Compilando nossa API ... "
-	#go build -ldflags="-s -w" -o crud.user.singleton.go
+	#go build -ldflags="-s -w" -o crud-singleton.go
 	CGO_ENABLED=0 GOOS=linux GOARCH=386 go build --trimpath -a -tags netgo -ldflags '-w -extldflags "-static"' -o crud.user.singleton main.go
 	@echo "buid completo..."
 	@echo "\033[0;33m################ run #####################\033[0m"

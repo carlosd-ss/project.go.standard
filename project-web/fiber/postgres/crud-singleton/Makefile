@@ -8,7 +8,7 @@ GOSUMDB=off
 update:
 	@echo "########## Compilando nossa API ... "
 	rm -f go.*
-	go mod init github.com/go.standard.project.layout/project.web/fiber/crud.postgresa
+	go mod init github.com/go.standard.project.layout/project.web/fiber/postgres/crud-singleton
 	go build --trimpath -ldflags="-s -w" -o crud.postgres main.go
 	#upx crud.postgres
 	@echo "buid completo..."

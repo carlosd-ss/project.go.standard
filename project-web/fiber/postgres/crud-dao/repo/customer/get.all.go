@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"encoding/json"
 
-	mcustomer "github.com/go.standard.project.layout/project-web/fiber/crud-dao/models/customer"
-	fmts "github.com/go.standard.project.layout/project-web/fiber/crud-dao/pkg/fmts"
+	mcustomer "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-dao/models/customer"
+	fmts "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-dao/pkg/fmts"
 )
 
 func GetAll(db *sql.DB, offset string, limit string) ([]string, error) {

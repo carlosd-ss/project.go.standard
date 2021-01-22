@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	hcustomer "github.com/go.standard.project.layout/project-web/fiber/crud-dao/controller/handler/customer"
+	hcustomer "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-dao/controller/handler/customer"
 	"github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/pkg/psql"
 
 	"github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/controller/route"

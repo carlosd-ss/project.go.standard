@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"errors"
 
-	mcustomer "github.com/go.standard.project.layout/project-web/fiber/crud-dao/models/customer"
-	fmts "github.com/go.standard.project.layout/project-web/fiber/crud-dao/pkg/fmts"
+	mcustomer "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-dao/models/customer"
+	fmts "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-dao/pkg/fmts"
 )
 
 func Update(db *sql.DB, customer mcustomer.CustomerPost) error {

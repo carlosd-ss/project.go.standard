@@ -1,9 +1,9 @@
 package user
 
 import (
-	pg "github.com/jeffotoni/project.go.standard/project-web/standard/crud.user.singleton/internal/psql"
+	pg "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/internal/psql"
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/internal/zerolog"
-	mUser "github.com/jeffotoni/project.go.standard/project-web/standard/crud.user.singleton/model/user"
+	mUser "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/model/user"
 )
 
 //InsertUser ..
@@ -16,7 +16,7 @@ func InsertUser(user mUser.User) error {
 			"1.0.0",
 			"post.go",
 			18,
-			"api.crud.user.singleton.com.br",
+			"api.crud-singleton.com.br",
 			"Repo Post user",
 			err.Error())
 		return err

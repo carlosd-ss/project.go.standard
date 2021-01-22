@@ -1,12 +1,12 @@
 package route
 
 import (
-	hcustomer "github.com/go.standard.project.layout/project-web/fiber/crud-dao/controller/handler/customer"
+	hcustomer "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-dao/controller/handler/customer"
 	"github.com/gofiber/cors"
 	"github.com/gofiber/fiber"
 	mw "github.com/gofiber/fiber/middleware"
 
-	handlerPing "github.com/go.standard.project.layout/project-web/fiber/crud-dao/controller/handler/ping"
+	handlerPing "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-dao/controller/handler/ping"
 )
 
 //

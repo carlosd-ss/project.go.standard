@@ -6,32 +6,32 @@ import (
 	"strings"
 
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/internal/fmts"
-	mUser "github.com/jeffotoni/project.go.standard/project-web/standard/crud.user.singleton/model/user"
-	repo "github.com/jeffotoni/project.go.standard/project-web/standard/crud.user.singleton/repo/user"
+	mUser "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/model/user"
+	repo "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/repo/user"
 )
 
-//UserPut ..
-func UserPut(id string, w http.ResponseWriter, r *http.Request) {
-	if strings.ToUpper(r.Method) == http.MethodPut {
-		handlerupdateUser(id, w, r)
+//UserPost ..
+func UserPost(w http.ResponseWriter, r *http.Request) {
+	if strings.ToUpper(r.Method) == http.MethodPost {
+		handleruserCreate(w, r)
 	} else {
 		w.Header().Add("Content-Type", "application/json")
-		jsonstr := `{"msg":"O método permitido é PUT!"}`
+		jsonstr := `{"msg":"O método permitido é POST!"}`
 		w.WriteHeader(http.StatusMethodNotAllowed)
 		w.Write([]byte(jsonstr))
 		return
 	}
 }
 
-//UpdateUser ..
-func handlerupdateUser(id string, w http.ResponseWriter, r *http.Request) {
+//UserCreate ..
+func handleruserCreate(w http.ResponseWriter, r *http.Request) {
 	w.Header().Add("Content-Type", "application/json")
 	var p mUser.User
 	err := json.NewDecoder(r.Body).Decode(&p)
 	if err != nil {
-		jsonmsg := "Error body!"
+		//bad request
 		w.WriteHeader(400)
-		json.NewEncoder(w).Encode(jsonmsg)
+		w.Write([]byte(fmts.Concat(`{"erro":"`, err.Error(), `"}`)))
 		return
 	}
 	//checando se veio o nome
@@ -41,12 +41,14 @@ func handlerupdateUser(id string, w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if err := repo.UpdateUser(id, p); err != nil {
+	if err := repo.InsertUser(p); err != nil {
+		//erro interno
 		w.WriteHeader(500)
 		w.Write([]byte(fmts.Concat(`{"erro":"`, err.Error(), `"}`)))
 		return
 	}
+
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(`{"msg":"Dados atualizados com sucesso!"}`))
+	w.Write([]byte(`{"msg":"Cadastrado com sucesso!"}`))
 	return
 }

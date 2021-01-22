@@ -16,7 +16,7 @@ func init() {
 			"1.0.0",
 			"gjwt.go",
 			25,
-			"api.crud.user.singleton.com.br",
+			"api.crud-singleton.com.br",
 			"init jwt.ParseRSAPrivateKeyFromPEM(privateByte)",
 			errx.Error())
 		return
@@ -29,7 +29,7 @@ func init() {
 			"1.0.0",
 			"gjwt.go",
 			38,
-			"api.crud.user.singleton.com.br",
+			"api.crud-singleton.com.br",
 			"init jwt.ParseRSAPublicKeyFromPEM(publicByte)",
 			errx.Error())
 		return

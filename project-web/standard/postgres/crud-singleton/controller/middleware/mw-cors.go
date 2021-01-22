@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	CorsAllow          = []string{"https://api.crud.user.singleton.com.br", "https://api.crud.user.singleton.com.br/"}
+	CorsAllow          = []string{"https://api.crud-singleton.com.br", "https://api.crud-singleton.com.br/"}
 	CorsAllowedMethods = []string{"HEAD", "GET", "POST", "PUT", "PATCH", "DELETE"}
 	CorsAllowedHeaders = []string{"*"}
 )

@@ -1,7 +1,7 @@
 package user
 
 import (
-	pg "github.com/jeffotoni/project.go.standard/project-web/standard/crud.user.singleton/internal/psql"
+	pg "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/internal/psql"
 	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/internal/zerolog"
 )
 
