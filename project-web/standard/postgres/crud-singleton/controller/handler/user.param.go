@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/internal/util"
+	"github.com/jeffotoni/project.go.standard/project-web/standard.libray/crud.user.singleton/internal/util"
 )
 
 //HomeHandler ..if len(ENVAMBI) <= 0 {

@@ -7,8 +7,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/internal/fmts"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/internal/zerolog"
+	"github.com/jeffotoni/project.go.standard/project-web/standard.libray/crud.user.singleton/internal/fmts"
+	"github.com/jeffotoni/project.go.standard/project-web/standard.libray/crud.user.singleton/internal/zerolog"
 )
 
 // Stop turns off the HTML Server

@@ -17,7 +17,7 @@ build:
 update:
 	@echo "########## Compilando nossa API ... "
 	@rm -f go.*
-	go mod init github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton
+	go mod init github.com/jeffotoni/project.go.standard/project-web/standard.libray/crud.user.singleton
 	CGO_ENABLED=0 GOOS=linux GOARCH=386 go build --trimpath -a -tags netgo -ldflags '-w -extldflags "-static"' -o crud.user.singleton main.go
 	@echo "buid completo..."
 	@echo "fim"

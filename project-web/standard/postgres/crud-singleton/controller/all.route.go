@@ -13,7 +13,7 @@ import (
 	"github.com/ulule/limiter/drivers/store/memory"
 
 	cf "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/config"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/controller/handler"
+	"github.com/jeffotoni/project.go.standard/project-web/standard.libray/crud.user.singleton/controller/handler"
 	mw "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/controller/middleware"
 	//"github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/internal/cors"
 )

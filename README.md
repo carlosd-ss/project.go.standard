@@ -35,7 +35,7 @@ tenha certeza que iriamos ficar super felizes com isto ❤️ e é claro compart
 ## Alguns diretórios usados nos layouts e suas estruturas
 ****************************
 
-### [Projetos Web Standard Singleton](https://github.com/jeffotoni/project.go.standard/tree/master/project.web/standard.libray/crud.user.singleton) ☑️
+### [Projetos Web Standard Singleton](https://github.com/jeffotoni/project.go.standard/tree/master/project-web/standard.libray/crud.user.singleton) ☑️
 
 ```_bash
 ├── config

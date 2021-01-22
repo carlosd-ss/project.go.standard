@@ -9,7 +9,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/internal/fmts"
+	"github.com/jeffotoni/project.go.standard/project-web/standard.libray/crud.user.singleton/internal/fmts"
 )
 
 var (

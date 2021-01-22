@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	cf "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/config"
-	"github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton/internal/fmts"
+	"github.com/jeffotoni/project.go.standard/project-web/standard.libray/crud.user.singleton/internal/fmts"
 	_ "github.com/lib/pq"
 )
 

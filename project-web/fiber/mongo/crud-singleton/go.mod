@@ -1,4 +1,4 @@
-module github.com/project.go.standard/project.web/fiber/crud.mongoa
+module github.com/project.go.standard/project-web/fiber/crud.mongoa
 
 go 1.14
 
