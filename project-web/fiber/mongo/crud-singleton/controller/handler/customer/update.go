@@ -3,11 +3,11 @@ package hcustomer
 import (
 	"github.com/gofiber/fiber"
 
-	mErrors "github.com/go.standard.project.layout/project-web/fiber/crud.mongoa/models/errors"
+	mErrors "github.com/project.go.standard/project-web/fiber/crud.mongoa/models/errors"
 
-	fmts "github.com/go.standard.project.layout/project-web/fiber/crud.mongoa/internal/fmts"
-	mcustomer "github.com/go.standard.project.layout/project-web/fiber/crud.mongoa/models/customer"
-	rcustomer "github.com/go.standard.project.layout/project-web/fiber/crud.mongoa/repo/customer"
+	fmts "github.com/project.go.standard/project-web/fiber/crud.mongoa/internal/fmts"
+	mcustomer "github.com/project.go.standard/project-web/fiber/crud.mongoa/models/customer"
+	rcustomer "github.com/project.go.standard/project-web/fiber/crud.mongoa/repo/customer"
 )
 
 func Update(c *fiber.Ctx) {

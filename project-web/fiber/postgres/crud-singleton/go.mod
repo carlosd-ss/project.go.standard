@@ -1,4 +1,4 @@
-module github.com/go.standard.project.layout/project.web/fiber/postgres/crud-singleton
+module github.com/project.go.standard/project.web/fiber/postgres/crud-singleton
 
 go 1.14
 

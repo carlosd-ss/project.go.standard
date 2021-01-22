@@ -1,10 +1,10 @@
 package hcustomer
 
 import (
-	fmts "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-singleton/internal/fmts"
-	mcustomer "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-singleton/models/customer"
-	mErrors "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-singleton/models/errors"
-	rcustomer "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-singleton/repo/customer"
+	fmts "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/internal/fmts"
+	mcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/models/customer"
+	mErrors "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/models/errors"
+	rcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/repo/customer"
 	"github.com/gofiber/fiber"
 )
 

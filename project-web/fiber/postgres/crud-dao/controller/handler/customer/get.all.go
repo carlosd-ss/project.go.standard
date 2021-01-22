@@ -1,9 +1,9 @@
 package hcustomer
 
 import (
-	mErrors "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-dao/models/errors"
-	fmts "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-dao/pkg/fmts"
-	rcustomer "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-dao/repo/customer"
+	mErrors "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/models/errors"
+	fmts "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/pkg/fmts"
+	rcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/repo/customer"
 	"github.com/gofiber/fiber"
 )
 

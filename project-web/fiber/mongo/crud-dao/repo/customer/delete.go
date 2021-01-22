@@ -3,7 +3,7 @@ package rcustomer
 import (
 	"errors"
 
-	db "github.com/go.standard.project.layout/project-web/fiber/crud.mongoa/internal/psql"
+	db "github.com/project.go.standard/project-web/fiber/crud.mongoa/internal/psql"
 )
 
 func Delete(uuid string) error {

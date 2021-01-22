@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"encoding/json"
 
-	mcustomer "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-dao/models/customer"
+	mcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/models/customer"
 )
 
 func GetUuid(db *sql.DB, uuid string) (string, error) {

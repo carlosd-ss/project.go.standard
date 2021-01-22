@@ -3,9 +3,9 @@ package rcustomer
 import (
 	"encoding/json"
 
-	fmts "github.com/go.standard.project.layout/project-web/fiber/crud.mongoa/internal/fmts"
-	db "github.com/go.standard.project.layout/project-web/fiber/crud.mongoa/internal/psql"
-	mcustomer "github.com/go.standard.project.layout/project-web/fiber/crud.mongoa/models/customer"
+	fmts "github.com/project.go.standard/project-web/fiber/crud.mongoa/internal/fmts"
+	db "github.com/project.go.standard/project-web/fiber/crud.mongoa/internal/psql"
+	mcustomer "github.com/project.go.standard/project-web/fiber/crud.mongoa/models/customer"
 )
 
 func GetAll(offset string, limit string) ([]string, error) {

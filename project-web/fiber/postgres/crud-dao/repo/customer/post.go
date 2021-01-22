@@ -3,7 +3,7 @@ package rcustomer
 import (
 	"database/sql"
 
-	mcustomer "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-dao/models/customer"
+	mcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/models/customer"
 )
 
 func Post(db *sql.DB, customer mcustomer.CustomerPost) error {

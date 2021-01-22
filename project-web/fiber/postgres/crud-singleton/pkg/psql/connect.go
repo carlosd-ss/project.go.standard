@@ -7,7 +7,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/go.standard.project.layout/project.web/fiber/postgres/crud-singleton/internal/fmts"
+	"github.com/project.go.standard/project.web/fiber/postgres/crud-singleton/internal/fmts"
 	_ "github.com/lib/pq"
 )
 

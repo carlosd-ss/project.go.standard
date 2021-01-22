@@ -3,7 +3,7 @@ package logone
 import (
 	"time"
 
-	"github.com/go.standard.project.layout/project.web/fiber/crud.mongoa/internal/fmts"
+	"github.com/project.go.standard/project.web/fiber/crud.mongoa/internal/fmts"
 )
 
 func Error(org_id, org_name, org_unity, profile_env,

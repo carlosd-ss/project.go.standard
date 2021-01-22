@@ -3,11 +3,11 @@ package main
 import (
 	"log"
 
-	hcustomer "github.com/go.standard.project.layout/project-web/fiber/postgres/crud-dao/controller/handler/customer"
-	"github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/pkg/psql"
+	hcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/controller/handler/customer"
+	"github.com/project.go.standard/project.web/fiber/crud.postgres.dao/pkg/psql"
 
-	"github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/controller/route"
-	"github.com/go.standard.project.layout/project.web/fiber/crud.postgres.dao/pkg/fmts"
+	"github.com/project.go.standard/project.web/fiber/crud.postgres.dao/controller/route"
+	"github.com/project.go.standard/project.web/fiber/crud.postgres.dao/pkg/fmts"
 
 	"github.com/gofiber/fiber"
 )
