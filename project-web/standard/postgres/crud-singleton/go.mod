@@ -1,4 +1,4 @@
-module github.com/jeffotoni/project.go.standard/project.web/standard.libray/crud.user.singleton
+module github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton
 
 go 1.15
 
