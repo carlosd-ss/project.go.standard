@@ -1,4 +1,4 @@
-module github.com/project.go.standard/project.web/fiber/crud.postgres.dao
+module github.com/project.go.standard/project-web/fiber/postgres/crud-dao
 
 go 1.14
 

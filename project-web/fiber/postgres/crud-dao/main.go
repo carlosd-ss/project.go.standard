@@ -4,10 +4,10 @@ import (
 	"log"
 
 	hcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/controller/handler/customer"
-	"github.com/project.go.standard/project.web/fiber/crud.postgres.dao/pkg/psql"
+	"github.com/project.go.standard/project-web/fiber/postgres/crud-dao/pkg/psql"
 
-	"github.com/project.go.standard/project.web/fiber/crud.postgres.dao/controller/route"
-	"github.com/project.go.standard/project.web/fiber/crud.postgres.dao/pkg/fmts"
+	"github.com/project.go.standard/project-web/fiber/postgres/crud-dao/controller/route"
+	"github.com/project.go.standard/project-web/fiber/postgres/crud-dao/pkg/fmts"
 
 	"github.com/gofiber/fiber"
 )
