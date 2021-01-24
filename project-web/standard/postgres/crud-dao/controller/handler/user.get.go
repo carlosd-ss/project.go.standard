@@ -11,7 +11,7 @@ import (
 //UserGet ..
 func (s *Server) UserGet(id string, w http.ResponseWriter, r *http.Request) {
 	if strings.ToUpper(r.Method) == http.MethodGet {
-		handlerGetUser(id, w, r)
+		s.handlerGetUserx(id, w, r)
 	} else {
 		w.Header().Add("Content-Type", "application/json")
 		jsonstr := `{"msg":"O método permitido é Get!"}`
@@ -21,7 +21,7 @@ func (s *Server) UserGet(id string, w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func (s *Server) handlerGetUser(id string, w http.ResponseWriter, r *http.Request) {
+func (s *Server) handlerGetUserx(id string, w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Add("Content-Type", "application/json")
 	/*
