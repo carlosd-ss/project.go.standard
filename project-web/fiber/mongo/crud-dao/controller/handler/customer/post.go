@@ -1,15 +1,15 @@
 package hcustomer
 
 import (
-	fmts "github.com/project.go.standard/project-web/fiber/crud.mongoa/internal/fmts"
-	mcustomer "github.com/project.go.standard/project-web/fiber/crud.mongoa/models/customer"
-	mErrors "github.com/project.go.standard/project-web/fiber/crud.mongoa/models/errors"
-	rcustomer "github.com/project.go.standard/project-web/fiber/crud.mongoa/repo/customer"
 	"github.com/gofiber/fiber"
+	mcustomer "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/models/customer"
+	mErrors "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/models/errors"
+	fmts "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/pkg/fmts"
+	rcustomer "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/repo/customer"
 )
 
-func Post(c *fiber.Ctx) {
-	var input mcustomer.Customer
+func (s *Server) Post(c *fiber.Ctx) {
+	var input mcustomer.CustomerPost
 	var Errors mErrors.Errors
 	if err := c.BodyParser(&input); err != nil {
 		Errors.Msg = err.Error()

@@ -1,13 +1,13 @@
 package hcustomer
 
 import (
-	fmts "github.com/project.go.standard/project-web/fiber/crud.mongoa/internal/fmts"
-	mErrors "github.com/project.go.standard/project-web/fiber/crud.mongoa/models/errors"
-	rcustomer "github.com/project.go.standard/project-web/fiber/crud.mongoa/repo/customer"
 	"github.com/gofiber/fiber"
+	mErrors "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/models/errors"
+	fmts "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/pkg/fmts"
+	rcustomer "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/repo/customer"
 )
 
-func GetAll(c *fiber.Ctx) {
+func (s *Server) GetAll(c *fiber.Ctx) {
 	var Errors mErrors.Errors
 	if c.Params("offset") == "" {
 		Errors.Msg = "Error: offset nao informado"

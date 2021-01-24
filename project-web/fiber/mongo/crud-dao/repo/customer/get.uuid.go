@@ -3,12 +3,12 @@ package rcustomer
 import (
 	"encoding/json"
 
-	db "github.com/project.go.standard/project-web/fiber/crud.mongoa/internal/psql"
-	mcustomer "github.com/project.go.standard/project-web/fiber/crud.mongoa/models/customer"
+	"go.mongodb.org/mongo-driver/mongo"
+
+	mcustomer "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/models/customer"
 )
 
-func GetUuid(uuid string) (string, error) {
-	db := db.Connect()
+func GetUuid(db *mongo.Client, uuid string) (string, error) {
 	var customer mcustomer.Customer
 	sqlexec := `
 	SELECT 

@@ -5,8 +5,8 @@ import (
 	"github.com/gofiber/fiber"
 	mw "github.com/gofiber/fiber/middleware"
 
-	handlerImp "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/controller/handler/customer"
-	handlerPing "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/controller/handler/ping"
+	handlerImp "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/controller/handler/customer"
+	handlerPing "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/controller/handler/ping"
 )
 
 //

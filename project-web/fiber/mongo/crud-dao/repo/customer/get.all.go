@@ -3,13 +3,13 @@ package rcustomer
 import (
 	"encoding/json"
 
-	fmts "github.com/project.go.standard/project-web/fiber/crud.mongoa/internal/fmts"
-	db "github.com/project.go.standard/project-web/fiber/crud.mongoa/internal/psql"
-	mcustomer "github.com/project.go.standard/project-web/fiber/crud.mongoa/models/customer"
+	"go.mongodb.org/mongo-driver/mongo"
+
+	mcustomer "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/models/customer"
+	fmts "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/pkg/fmts"
 )
 
-func GetAll(offset string, limit string) ([]string, error) {
-	db := db.Connect()
+func GetAll(db *mongo.Client, offset string, limit string) ([]string, error) {
 	var customer mcustomer.Customer
 	sqlexec := `
 	SELECT 

@@ -1,13 +1,14 @@
 package rcustomer
 
 import (
-	db "github.com/project.go.standard/project-web/fiber/crud.mongoa/internal/psql"
-	mcustomer "github.com/project.go.standard/project-web/fiber/crud.mongoa/models/customer"
+	"go.mongodb.org/mongo-driver/mongo"
+
+	mcustomer "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/models/customer"
 )
 
-func Post(customer mcustomer.Customer) error {
+func Post(db *mongo.Client, customer mcustomer.Customer) error {
 	//ainda sendo feito
-	db := db.Connect()
+
 	//Those ones that are not here on the insert, are default fields
 	sqlexec := `insert 
 	into ad_customer(

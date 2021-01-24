@@ -6,8 +6,8 @@ import (
 	"strings"
 
 	"github.com/jeffotoni/project.go.standard/project-web/standard.libray/crud.user.singleton/internal/fmts"
-	mUser "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/model/user"
-	repo "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/repo/user"
+	mUser "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-dao/model/user"
+	repo "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-dao/repo/user"
 )
 
 //UserPost ..

@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/project.go.standard/project-web/fiber/crud.mongoa/internal/fmts"
+	"github.com/project.go.standard/project-web/fiber/mongo/crud-dao/pkg/fmts"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
@@ -58,7 +58,7 @@ func Connect() (*mongo.Client, context.Context, error) {
 			}
 			ctx, _ = context.WithTimeout(context.Background(), TimeContext)
 			err := client.Connect(ctx)
-			if err != nil {
+			if err != nil {(
 				return
 			}
 		}

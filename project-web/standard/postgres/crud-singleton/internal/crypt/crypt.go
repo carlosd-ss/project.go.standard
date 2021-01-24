@@ -45,7 +45,7 @@ func Blowfish(password string) string {
 			"1.0.0",
 			"crypt.go",
 			288,
-			"api.crud-singleton.com.br",
+			"api.crud-dao.com.br",
 			"bcrypt.GenerateFromPassword",
 			err.Error())
 	}
@@ -104,7 +104,7 @@ func Decode64String(encoded string) string {
 				"1.0.0",
 				"crypt.go",
 				400,
-				"api.crud-singleton.com.br",
+				"api.crud-dao.com.br",
 				"Decode64String base64.StdEncoding.DecodeString",
 				err.Error())
 			return ""

@@ -12,10 +12,10 @@ import (
 	"github.com/ulule/limiter/drivers/middleware/stdlib"
 	"github.com/ulule/limiter/drivers/store/memory"
 
-	cf "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/config"
 	"github.com/jeffotoni/project.go.standard/project-web/standard.libray/crud.user.singleton/controller/handler"
-	mw "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/controller/middleware"
-	//"github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/internal/cors"
+	cf "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-dao/config"
+	mw "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-dao/controller/middleware"
+	//"github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-dao/internal/cors"
 )
 
 //Routes

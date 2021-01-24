@@ -4,8 +4,8 @@
 package controller
 
 import (
-	cf "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/config"
 	"github.com/jeffotoni/project.go.standard/project-web/standard.libray/crud.user.singleton/internal/fmts"
+	cf "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-dao/config"
 )
 
 //Show log

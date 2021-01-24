@@ -7,7 +7,7 @@ package middleware
 //import (
 //"net/http"
 
-//"github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/internal/gjwt"
+//"github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-dao/internal/gjwt"
 //)
 
 //func AutJwt() Adapter {

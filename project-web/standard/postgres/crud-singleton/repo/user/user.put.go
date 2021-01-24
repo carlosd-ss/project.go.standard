@@ -1,9 +1,9 @@
 package user
 
 import (
-	pg "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/internal/psql"
 	"github.com/jeffotoni/project.go.standard/project-web/standard.libray/crud.user.singleton/internal/zerolog"
-	mUser "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/model/user"
+	pg "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-dao/internal/psql"
+	mUser "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-dao/model/user"
 )
 
 //UpdateUser ..
@@ -17,7 +17,7 @@ func UpdateUser(id string, user mUser.User) error {
 			"1.0.0",
 			"put.go",
 			19,
-			"api.crud-singleton.com.br",
+			"api.crud-dao.com.br",
 			"Repo Put user",
 			err.Error())
 		return err

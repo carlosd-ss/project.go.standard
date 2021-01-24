@@ -5,12 +5,12 @@ import (
 	"github.com/gofiber/fiber"
 	mw "github.com/gofiber/fiber/middleware"
 
-	handlerImp "github.com/project.go.standard/project-web/fiber/crud.mongoa/controller/handler/customer"
-	handlerPing "github.com/project.go.standard/project-web/fiber/crud.mongoa/controller/handler/ping"
+	handlerImp "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/controller/handler/customer"
+	handlerPing "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/controller/handler/ping"
 )
 
 //
-func AllRoutes(app *fiber.App) {
+func AllRoutes(s *hcustomer.Server, app *fiber.App) {
 	////
 	app.Use(cors.New())
 	app.Use(mw.Compress(mw.CompressLevelBestSpeed))

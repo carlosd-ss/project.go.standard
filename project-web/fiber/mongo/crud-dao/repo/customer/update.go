@@ -3,13 +3,13 @@ package rcustomer
 import (
 	"errors"
 
-	fmts "github.com/project.go.standard/project-web/fiber/crud.mongoa/internal/fmts"
-	db "github.com/project.go.standard/project-web/fiber/crud.mongoa/internal/psql"
-	mcustomer "github.com/project.go.standard/project-web/fiber/crud.mongoa/models/customer"
+	"go.mongodb.org/mongo-driver/mongo"
+
+	mcustomer "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/models/customer"
+	fmts "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/pkg/fmts"
 )
 
-func Update(customer mcustomer.Customer) error {
-	db := db.Connect()
+func Update(db *mongo.Client, customer mcustomer.Customer) error {
 	//Those ones that are not here on the insert, are default fields
 	sqlexec := `UPDATE ad_customer SET imp_user_update = $1`
 

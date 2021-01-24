@@ -8,7 +8,7 @@ GOSUMDB=off
 update:
 	@echo "########## Compilando nossa API ... "
 	rm -f go.*
-	go mod init github.com/project.go.standard/project-web/fiber/crud.mongoa
+	go mod init github.com/project.go.standard/project-web/fiber/mongo/crud-dao
 	go build --trimpath -ldflags="-s -w" -o crud.mongo main.go
 	#upx crud.mongo
 	@echo "buid completo..."

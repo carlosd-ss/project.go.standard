@@ -3,11 +3,10 @@ package rcustomer
 import (
 	"errors"
 
-	db "github.com/project.go.standard/project-web/fiber/crud.mongoa/internal/psql"
+	"go.mongodb.org/mongo-driver/mongo"
 )
 
-func Delete(uuid string) error {
-	db := db.Connect()
+func Delete(db *mongo.Client, uuid string) error {
 	//Those ones that are not here on the insert, are default fields
 	sqlexec := `DELETE from ad_customer WHERE  imp_uuid = $1`
 	res, err := db.Exec(sqlexec, uuid)

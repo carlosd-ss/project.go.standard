@@ -1,11 +1,11 @@
 package hcustomer
 
 import (
-	fmts "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/internal/fmts"
-	mcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/models/customer"
-	mErrors "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/models/errors"
-	rcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/repo/customer"
 	"github.com/gofiber/fiber"
+	fmts "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/internal/fmts"
+	mcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/models/customer"
+	mErrors "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/models/errors"
+	rcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/repo/customer"
 )
 
 func Post(c *fiber.Ctx) {

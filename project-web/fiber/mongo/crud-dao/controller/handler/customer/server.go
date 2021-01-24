@@ -1,12 +1,12 @@
 package hcustomer
 
 import (
-	"database/sql"
+	"go.mongodb.org/mongo-driver/mongo"
 
 	"github.com/gofiber/fiber"
 )
 
 type Server struct {
 	App *fiber.App
-	Db  *sql.DB
+	Db  *mongo.Client
 }

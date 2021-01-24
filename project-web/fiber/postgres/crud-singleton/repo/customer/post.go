@@ -1,8 +1,8 @@
 package rcustomer
 
 import (
-	db "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/internal/psql"
-	mcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/models/customer"
+	db "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/internal/psql"
+	mcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/models/customer"
 )
 
 func Post(customer mcustomer.Customer) error {

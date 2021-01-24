@@ -3,7 +3,7 @@ package rcustomer
 import (
 	"errors"
 
-	db "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/internal/psql"
+	db "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/internal/psql"
 )
 
 func Delete(uuid string) error {

@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	repo "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/repo/user"
+	repo "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-dao/repo/user"
 )
 
 //UserDelete ..

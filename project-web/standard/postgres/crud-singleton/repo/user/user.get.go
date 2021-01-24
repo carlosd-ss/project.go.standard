@@ -1,8 +1,8 @@
 package user
 
 import (
-	pg "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-singleton/internal/psql"
 	"github.com/jeffotoni/project.go.standard/project-web/standard.libray/crud.user.singleton/internal/zerolog"
+	pg "github.com/jeffotoni/project.go.standard/project-web/standard/postgres/crud-dao/internal/psql"
 )
 
 //List ..
@@ -15,7 +15,7 @@ func List(rid string) (name, lastname, id string) {
 			"1.0.0",
 			"user.go",
 			13,
-			"api.crud-singleton.com.br",
+			"api.crud-dao.com.br",
 			"Repo List user",
 			err.Error())
 		return "", "", ""

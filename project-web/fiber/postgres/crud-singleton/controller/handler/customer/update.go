@@ -3,11 +3,11 @@ package hcustomer
 import (
 	"github.com/gofiber/fiber"
 
-	mErrors "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/models/errors"
+	mErrors "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/models/errors"
 
-	fmts "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/internal/fmts"
-	mcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/models/customer"
-	rcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-singleton/repo/customer"
+	fmts "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/internal/fmts"
+	mcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/models/customer"
+	rcustomer "github.com/project.go.standard/project-web/fiber/postgres/crud-dao/repo/customer"
 )
 
 func Update(c *fiber.Ctx) {
