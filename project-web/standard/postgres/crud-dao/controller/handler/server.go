@@ -2,11 +2,10 @@ package handler
 
 import (
 	"database/sql"
-
-	"github.com/gofiber/fiber"
+	"net/http"
 )
 
 type Server struct {
-	App *fiber.App
+	App *http.Request
 	Db  *sql.DB
 }
