@@ -36,5 +36,4 @@ func (s *Server) handlerGetUserx(id string, w http.ResponseWriter, r *http.Reque
 	w.WriteHeader(http.StatusOK)
 	name, lastname, id := repo.List(s.Db, id)
 	w.Write([]byte(fmts.Concat(`{"user":"`, name, `","lastname":"`, lastname, `","id":`, id, `}`)))
-	return
 }

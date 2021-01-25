@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"context"
 	"encoding/json"
 	"net/http"
 	"strings"
@@ -12,9 +11,9 @@ import (
 )
 
 //UserPut ..
-func (s *Server) UserPut(ctx context.Context, id string, w http.ResponseWriter, r *http.Request) {
+func (s *Server) UserPut(id string, w http.ResponseWriter, r *http.Request) {
 	if strings.ToUpper(r.Method) == http.MethodPut {
-		handlerupdateUser(id, w, r)
+		s.handlerupdateUser(id, w, r)
 	} else {
 		w.Header().Add("Content-Type", "application/json")
 		jsonstr := `{"msg":"O método permitido é PUT!"}`
@@ -49,5 +48,4 @@ func (s *Server) handlerupdateUser(id string, w http.ResponseWriter, r *http.Req
 	}
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte(`{"msg":"Dados atualizados com sucesso!"}`))
-	return
 }

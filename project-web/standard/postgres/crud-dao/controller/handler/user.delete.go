@@ -10,7 +10,7 @@ import (
 //UserDelete ..
 func (s *Server) UserDelete(id string, w http.ResponseWriter, r *http.Request) {
 	if strings.ToUpper(r.Method) == http.MethodDelete {
-		handlerDeleteUser(id, w, r)
+		s.handlerDeleteUser(id, w, r)
 	} else {
 		w.Header().Add("Content-Type", "application/json")
 		jsonstr := `{"msg":"O método permitido é Delete!"}`
@@ -38,5 +38,4 @@ func (s *Server) handlerDeleteUser(id string, w http.ResponseWriter, r *http.Req
 	jsonstr := `{"msg":"Usuário não pode ser deletado!"}`
 	w.WriteHeader(http.StatusBadRequest)
 	w.Write([]byte(jsonstr))
-	return
 }

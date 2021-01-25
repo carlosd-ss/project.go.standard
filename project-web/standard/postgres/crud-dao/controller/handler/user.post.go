@@ -13,7 +13,7 @@ import (
 //UserPost ..
 func (s *Server) UserPost(w http.ResponseWriter, r *http.Request) {
 	if strings.ToUpper(r.Method) == http.MethodPost {
-		handleruserCreate(w, r)
+		s.handleruserCreate(w, r)
 	} else {
 		w.Header().Add("Content-Type", "application/json")
 		jsonstr := `{"msg":"O método permitido é POST!"}`
@@ -23,7 +23,7 @@ func (s *Server) UserPost(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-//UserCreate ..
+//Usercreate ..
 func (s *Server) handleruserCreate(w http.ResponseWriter, r *http.Request) {
 	w.Header().Add("Content-Type", "application/json")
 	var p mUser.User
@@ -50,5 +50,4 @@ func (s *Server) handleruserCreate(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte(`{"msg":"Cadastrado com sucesso!"}`))
-	return
 }

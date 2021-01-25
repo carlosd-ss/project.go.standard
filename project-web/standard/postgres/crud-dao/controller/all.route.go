@@ -50,7 +50,7 @@ func Routes(s *handler.Server, cfg cf.Config) *GoServerHttp {
 	// vale lembrar que alguns endpoints utilizam regex e tem sua criação dinamica, ou isto significa que este rate limit de 15 requests/s será atribuido a todos,
 	// que nascem desta maneira
 	mux.Handle("/", mw.Use(stdlib.NewMiddleware(limiter.New(memory.NewStore(), limiter.Rate{Formatted: "",
-		Period: 1 * time.Second, Limit: 15})).Handler(http.HandlerFunc(handler.HomeHandler)),
+		Period: 1 * time.Second, Limit: 15})).Handler(http.HandlerFunc(s.HomeHandler)),
 		mw.CustomHeaders(),
 		mw.Logger("/")))
 

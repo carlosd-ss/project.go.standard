@@ -11,7 +11,7 @@ import (
 )
 
 //HomeHandler ..if len(ENVAMBI) <= 0 {
-func HomeHandler(w http.ResponseWriter, r *http.Request) {
+func (s *Server) HomeHandler(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path == "/" {
 		w.WriteHeader(http.StatusNotFound)
 		return
@@ -22,17 +22,17 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 		endpoint, nameregex := util.EndpointRegex(r)
 		if endpoint == "/user" && len(nameregex) >= 0 && http.MethodDelete == strings.ToUpper(r.Method) {
 			//nameregex = crypt.Base64Dec(nameregex)
-			UserDelete(nameregex, w, r)
+			s.UserDelete(nameregex, w, r)
 			return
 		}
 		if endpoint == "/user" && len(nameregex) >= 0 && http.MethodPut == strings.ToUpper(r.Method) {
 			//nameregex = crypt.Base64Dec(nameregex)
-			UserPut(nameregex, w, r)
+			s.UserPut(nameregex, w, r)
 			return
 		}
 		if endpoint == "/user" && len(nameregex) >= 0 && http.MethodGet == strings.ToUpper(r.Method) {
 			//nameregex = crypt.Base64Dec(nameregex)
-			UserGet(nameregex, w, r)
+			s.UserGet(nameregex, w, r)
 			return
 		}
 		// create url expression, fetch some urls GET

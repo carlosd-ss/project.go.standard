@@ -16,7 +16,7 @@ import (
 var rp = rand.New(rand.NewSource(time.Now().UnixNano()))
 
 //Ping ..
-func Ping(w http.ResponseWriter, r *http.Request) {
+func (s *Server) Ping(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	defer r.Body.Close()
 	delay := int32(rp.Float64() * 500)
@@ -39,5 +39,4 @@ func Ping(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte(jsonstr))
-	return
 }
