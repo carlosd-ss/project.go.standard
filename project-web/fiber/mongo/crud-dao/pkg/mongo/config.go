@@ -1,122 +1,39 @@
-package mongo
+package mongoconf
 
 import (
 	"context"
-	"sync"
-	"time"
-
-	"github.com/project.go.standard/project-web/fiber/mongo/crud-dao/pkg/fmts"
-	"github.com/project.go.standard/project-web/fiber/mongo/crud-dao/pkg/logone"
-
-	// "internal/pkg/fmts"
+	"log"
 
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
+	"go.mongodb.org/mongo-driver/mongo/readpref"
 )
 
-const (
-	Schema            = "MONGODB_SCHEMA"
-	Uri               = "MONGODB_URI"
-	Username          = "MONGODB_USERNAME"
-	Password          = "MONGODB_PASSWORD"
-	databaseName      = "MONGODB_DATABASE"
-	collectionName    = "MONGODB_COLLECTION"
-	pingTimeout       = "MONGODB_PING_TIMEOUT"
-	readTimeout       = "MONGODB_READ_TIMEOUT"
-	writeTimeout      = "MONGODB_WRITE_TIMEOUT"
-	Options           = "MONGODB_OPTIONS"
-	connectionTimeout = "MONGODB_CONNECTION_TIMEOUT_IN_SECONDS"
-)
+//GetMongoDbConnection get connection of mongodb
+func GetMongoDbConnection() (*mongo.Client, error) {
 
-var (
-	client               *mongo.Client
-	ctx                  context.Context
-	connectOnce          sync.Once
-	connectOnce2         sync.Once
-	CollectionOnce       sync.Once
-	session              *mongo.Client
-	collection           *mongo.Collection
-	ConnectionTimeout    = time.Duration(connectionTimeout, 2*time.Minute)
-	pingTimeoutDuration  = time.Duration(pingTimeout, 30*time.Second)
-	readTimeoutDuration  = time.Duration(readTimeout, 30*time.Second)
-	writeTimeoutDuration = time.Duration(writeTimeout, 30*time.Second)
-	err                  error
-)
+	client, err := mongo.Connect(context.Background(), options.Client().ApplyURI("mongodb://localhost:27017"))
 
-var (
-	mgoSchema      = "mongodb"
-	mgoUri         = "localhost:27017"
-	mgoUser        = "root"
-	mgoPass        = "senhahere"
-	MgoDb          = "databaseHere"
-	mgoRetry       = "authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=false"
-	CollectionName = "Clientes"
-)
-
-func connectDefault() (connectionString string) {
-	if len(mgoUser) > 0 && len(mgoPass) > 0 {
-		connectionString = fmts.Concat(mgoSchema, "://", mgoUser, ":", mgoPass, "@", mgoUri, "/", MgoDb, "?", mgoRetry)
-	} else {
-		connectionString = fmts.Concat(mgoSchema, "://", mgoUri, "/", MgoDb, "?", mgoRetry)
+	if err != nil {
+		log.Fatal(err)
 	}
-	return
+
+	err = client.Ping(context.Background(), readpref.Primary())
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return client, nil
 }
 
-func connectClient() *mongo.Client {
-	connectOnce.Do(func() {
-		if session == nil {
-			session, err = mongo.NewClient(
-				options.Client().
-					ApplyURI(connectDefault()))
-			if err != nil {
-				logone.Error(
-					"10000",
-					"enginer",
-					"master",
-					"global.env",
-					"0001",
-					"localhost",
-					"Clientes",
-					"100001", "", "",
-					"admin", "127.0.0.1",
-					"mongo.NewClient",
-					`options.Client()`,
-					"msg,err", err.Error())
-			}
-		}
-	})
-	return session
-}
+func GetMongoDbCollection(DbName string, CollectionName string) (*mongo.Collection, error) {
+	client, err := GetMongoDbConnection()
 
-func Connect() *mongo.Client {
-	connectOnce2.Do(func() {
-		if client == nil {
-			client = connectClient()
-			ctx, _ = context.WithTimeout(context.Background(), ConnectionTimeout)
-			err := client.Connect(ctx)
-			if err != nil {
-				logone.Error(
-					"10000",
-					"enginer",
-					"master",
-					"global.env",
-					"0001",
-					"localhost",
-					"Clientes",
-					"100001", "", "",
-					"admin", "127.0.0.1",
-					"client.Connect(ctx)",
-					`ctx`,
-					"msg,err", err.Error())
-				return
-			}
+	if err != nil {
+		return nil, err
+	}
 
-		}
-	})
-	return client
-}
+	collection := client.Database(DbName).Collection(CollectionName)
 
-func GetMongoCollection(collectionName string) (*mongo.Collection, error) {
-	collection = client.Database(MgoDb).Collection(CollectionName)
 	return collection, nil
 }

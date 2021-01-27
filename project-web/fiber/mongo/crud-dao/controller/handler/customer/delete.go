@@ -1,28 +1,45 @@
 package hcustomer
 
 import (
+	"context"
+	"encoding/json"
+	"log"
+
 	"github.com/gofiber/fiber"
-	mErrors "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/models/errors"
-	fmts "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/pkg/fmts"
-	rcustomer "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/repo/customer"
+	mongoconf "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/pkg/mongo"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-func (s *Server) Delete(c *fiber.Ctx) {
-	var Errors mErrors.Errors
-	uuid := c.Params("uuid")
-	if uuid == "" {
-		Errors.Msg = "Error: Nenhum uuid informado "
-		//400=Bad request
-		c.Status(400).JSON(Errors)
+func Delete(c *fiber.Ctx) {
+	const (
+		db             = "dbcustomers"
+		collectionpost = "customerpost"
+	)
+	collection, err := mongoconf.GetMongoDbCollection(db, collectionpost)
+
+	if err != nil {
+		c.Status(400).Send(err)
 		return
 	}
 
-	if err := rcustomer.Delete(uuid); err != nil {
-		Errors.Msg = fmts.Concat("Error: ", err.Error())
-		//404= not found
-		c.Status(404).JSON(Errors)
+	objID, err := primitive.ObjectIDFromHex(c.Params("id"))
+	if err != nil {
+		c.Status(400).Send(err)
 		return
 	}
+	res, err := collection.DeleteOne(context.Background(), bson.M{"_id": objID})
+
+	if err != nil {
+		c.Status(400).Send(err)
+		return
+	}
+
+	jsonResponse, err := json.Marshal(res)
+	if err != nil {
+		log.Println(err)
+		return
+	}
+	c.Send(jsonResponse)
 	c.Status(200)
-	return
 }

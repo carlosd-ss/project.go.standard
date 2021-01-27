@@ -3,6 +3,7 @@ module github.com/project.go.standard/project-web/fiber/mongo/crud-dao
 go 1.14
 
 require (
+	github.com/Kamva/mgm/v2 v2.0.0
 	github.com/Nhanderu/brdoc v1.1.2
 	github.com/gofiber/cors v0.1.0
 	github.com/gofiber/fiber v1.11.0

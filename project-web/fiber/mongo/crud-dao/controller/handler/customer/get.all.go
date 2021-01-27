@@ -1,33 +1,59 @@
 package hcustomer
 
 import (
+	"context"
+	"encoding/json"
+	"log"
+
 	"github.com/gofiber/fiber"
-	mErrors "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/models/errors"
-	fmts "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/pkg/fmts"
-	rcustomer "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/repo/customer"
+	mongoconf "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/pkg/mongo"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-func (s *Server) GetAll(c *fiber.Ctx) {
-	var Errors mErrors.Errors
-	if c.Params("offset") == "" {
-		Errors.Msg = "Error: offset nao informado"
-		//bad request
-		c.Status(400).JSON(Errors)
-		return
-	}
-	if c.Params("limit") == "" {
-		Errors.Msg = "Error: limit nao informado"
-		//bad request
-		c.Status(400).JSON(Errors)
-		return
-	}
-	returncustomer, err := rcustomer.GetAll(c.Params("offset"), c.Params("limit"))
+func GetAll(c *fiber.Ctx) {
+	const (
+		db             = "dbcustomers"
+		collectionpost = "customerpost"
+	)
+	collection, err := mongoconf.GetMongoDbCollection(db, collectionpost)
 	if err != nil {
-		Errors.Msg = fmts.Concat("Error: ", err.Error())
-		//404= not found
-		c.Status(404).JSON(Errors)
+		c.Status(400).Send(err)
 		return
 	}
-	c.Status(200).Send(returncustomer)
-	return
+
+	var filter bson.M = bson.M{}
+
+	if c.Params("id") != "" {
+		id := c.Params("id")
+		objID, err := primitive.ObjectIDFromHex(id)
+		if err != nil {
+			log.Println(err)
+			return
+		}
+		filter = bson.M{"_id": objID}
+	}
+
+	var results []bson.M
+	cur, err := collection.Find(context.Background(), filter)
+	if err != nil {
+		c.Status(400).Send(err)
+		return
+	}
+	defer cur.Close(context.Background())
+
+	cur.All(context.Background(), &results)
+
+	if results == nil {
+		c.SendStatus(400)
+		return
+	}
+
+	json, err := json.Marshal(results)
+	if err != nil {
+		log.Println(err)
+		return
+	}
+	c.Send(json)
+	c.Status(200)
 }
