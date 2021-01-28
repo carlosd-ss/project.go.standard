@@ -1,4 +1,4 @@
-package hcustomer
+package handler
 
 import (
 	"context"

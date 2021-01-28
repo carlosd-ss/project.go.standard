@@ -1,4 +1,4 @@
-package hcustomer
+package handler
 
 import (
 	"context"
@@ -11,35 +11,49 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-func Delete(c *fiber.Ctx) {
+func GetAll(c *fiber.Ctx) {
 	const (
 		db             = "dbcustomers"
 		collectionpost = "customerpost"
 	)
 	collection, err := mongoconf.GetMongoDbCollection(db, collectionpost)
-
 	if err != nil {
 		c.Status(400).Send(err)
 		return
 	}
 
-	objID, err := primitive.ObjectIDFromHex(c.Params("id"))
+	var filter bson.M = bson.M{}
+
+	if c.Params("id") != "" {
+		id := c.Params("id")
+		objID, err := primitive.ObjectIDFromHex(id)
+		if err != nil {
+			log.Println(err)
+			return
+		}
+		filter = bson.M{"_id": objID}
+	}
+
+	var results []bson.M
+	cur, err := collection.Find(context.Background(), filter)
 	if err != nil {
 		c.Status(400).Send(err)
 		return
 	}
-	res, err := collection.DeleteOne(context.Background(), bson.M{"_id": objID})
+	defer cur.Close(context.Background())
 
-	if err != nil {
-		c.Status(400).Send(err)
+	cur.All(context.Background(), &results)
+
+	if results == nil {
+		c.SendStatus(400)
 		return
 	}
 
-	jsonResponse, err := json.Marshal(res)
+	json, err := json.Marshal(results)
 	if err != nil {
 		log.Println(err)
 		return
 	}
-	c.Send(jsonResponse)
+	c.Send(json)
 	c.Status(200)
 }

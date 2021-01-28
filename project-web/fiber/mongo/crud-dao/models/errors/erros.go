@@ -1,5 +1,5 @@
 package merrors
 
 type Errors struct {
-	Msg string
+	Msg string `json:"msg"`
 }
