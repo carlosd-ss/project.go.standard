@@ -5,13 +5,15 @@ import (
 	"encoding/json"
 	"log"
 
-	"github.com/gofiber/fiber"
+	mcustomer "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/models/customer"
 	mongoconf "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/pkg/mongo"
+
+	"github.com/gofiber/fiber"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-func GetAll(c *fiber.Ctx) {
+func (s *Conn) Update(c *fiber.Ctx) {
 	const (
 		db             = "dbcustomers"
 		collectionpost = "customerpost"
@@ -21,39 +23,31 @@ func GetAll(c *fiber.Ctx) {
 		c.Status(400).Send(err)
 		return
 	}
+	var customer mcustomer.CustomerPost
+	json.Unmarshal([]byte(c.Body()), &customer)
 
-	var filter bson.M = bson.M{}
-
-	if c.Params("id") != "" {
-		id := c.Params("id")
-		objID, err := primitive.ObjectIDFromHex(id)
-		if err != nil {
-			log.Println(err)
-			return
-		}
-		filter = bson.M{"_id": objID}
+	update := bson.M{
+		"$set": customer,
 	}
 
-	var results []bson.M
-	cur, err := collection.Find(context.Background(), filter)
+	objID, err := primitive.ObjectIDFromHex(c.Params("id"))
+	if err != nil {
+		c.Status(400).Send(err)
+		return
+
+	}
+	res, err := collection.UpdateOne(context.Background(), bson.M{"_id": objID}, update)
+
 	if err != nil {
 		c.Status(400).Send(err)
 		return
 	}
-	defer cur.Close(context.Background())
 
-	cur.All(context.Background(), &results)
-
-	if results == nil {
-		c.SendStatus(400)
-		return
-	}
-
-	json, err := json.Marshal(results)
+	response, err := json.Marshal(res)
 	if err != nil {
 		log.Println(err)
 		return
 	}
-	c.Send(json)
+	c.Send(response)
 	c.Status(200)
 }

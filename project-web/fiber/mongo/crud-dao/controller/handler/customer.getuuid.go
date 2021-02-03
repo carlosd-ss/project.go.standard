@@ -7,7 +7,7 @@ import (
 	merrors "github.com/project.go.standard/project-web/fiber/mongo/crud-dao/models/errors"
 )
 
-func (s *Conn) Delete(c *fiber.Ctx) {
+func (s *Conn) GetUuid(c *fiber.Ctx) {
 	var msgE merrors.Errors
 	id := c.Params("id")
 	c.Set("Content-Type", "application/json")

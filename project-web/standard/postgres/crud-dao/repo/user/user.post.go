@@ -15,7 +15,7 @@ func InsertUser(db *sql.DB, user mUser.User) error {
 	if err != nil {
 		zerolog.Error(
 			"1.0.0",
-			"post.go",
+			"customer.post.go",
 			18,
 			"api.crud-dao.com.br",
 			"Repo Post user",

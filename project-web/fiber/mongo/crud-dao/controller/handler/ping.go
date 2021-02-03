@@ -1,11 +1,11 @@
 package handler
 
 import (
-	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber"
 )
 
 // Ping returns a pong string through fiber context
-func (c Conn) Ping(c *fiber.Ctx) {
+func (s *Conn) Ping(c *fiber.Ctx) {
 	c.Status(200).SendString("pong")
 	return
 }
